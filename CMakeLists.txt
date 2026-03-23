@@ -16,13 +16,12 @@ else()
 endif()
 
 # Main executable
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp Material.cpp Senzor.cpp SenzorContaminare.cpp UnitateReciclare.cpp)
 
 if(GITHUB_ACTIONS)
     message("NOTE: GITHUB_ACTIONS defined")
     target_compile_definitions(${PROJECT_NAME} PRIVATE GITHUB_ACTIONS)
 endif()
-
 # Compiler flags
 message("Compiler: ${CMAKE_CXX_COMPILER_ID} version ${CMAKE_CXX_COMPILER_VERSION}")
 if(MSVC)
