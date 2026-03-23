@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\main.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\main.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/main.cpp",
+  "output": "CMakeFiles/oop.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\Material.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\Material.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/Material.cpp",
+  "output": "CMakeFiles/oop.dir/Material.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\Senzor.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\Senzor.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/Senzor.cpp",
+  "output": "CMakeFiles/oop.dir/Senzor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\SenzorContaminare.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\SenzorContaminare.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/SenzorContaminare.cpp",
+  "output": "CMakeFiles/oop.dir/SenzorContaminare.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\UnitateReciclare.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\UnitateReciclare.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/UnitateReciclare.cpp",
+  "output": "CMakeFiles/oop.dir/UnitateReciclare.cpp.obj"
+}
+]
