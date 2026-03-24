@@ -13,7 +13,7 @@ class Material
 public:
     //constructori material 
     Material();
-    Material(const char* id, std::string tp, double gr, double gc);
+    explicit Material(const char* id, std::string tp, double gr, double gc);
     Material(const Material& altul);
  
     //logica de copiere 
@@ -26,6 +26,9 @@ public:
     void afisare() const;
 
     //gettere 
+    const char* getLotId() const {
+        return lotId;
+    }
     std::string getTip() const 
     {
         return tip;
@@ -38,4 +41,6 @@ public:
         return gradContaminare;
     }
     
+    //suprascriem operatorul de afisare in loc de functii de afisare 
+    friend std::ostream& operator<<(std::ostream& os, const Material& m);
 };

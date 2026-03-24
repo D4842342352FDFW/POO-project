@@ -11,16 +11,22 @@ Material::Material() : tip("Necunoscut"), greutate(0.0), gradContaminare(0.0){
 //constructor cu parametri material
 Material::Material(const char* id, std::string tp, double gr, double gc) : tip(tp), greutate(gr), gradContaminare(gc)
 {
-    lotId = new char[strlen(id) + 1];
-    strcpy(lotId,id);
+    if(id != nullptr)
+    {
+        lotId = new char[strlen(id) + 1];
+        strcpy(lotId,id);  
+    }
+    else
+    {
+        lotId = new char[2];
+        strcpy(lotId, "0");
+    }
+    
 };
 
 //constructor de copiere material 
-Material::Material(const Material& altul)
+Material::Material(const Material& altul) : tip(altul.tip), greutate(altul.greutate), gradContaminare(altul.gradContaminare)
 {
-    tip = altul.tip;
-    greutate = altul.greutate;
-    gradContaminare = altul.gradContaminare;
     lotId = new char[strlen(altul.lotId) + 1];
     strcpy(lotId, altul.lotId);
 };
@@ -49,7 +55,10 @@ Material::~Material()
     delete[] lotId;
 };
 
-//afisare date material 
-void Material::afisare() const{
-    std::cout << "Seria " << lotId << " Tip " << tip << " Greutate " << greutate << " kg si gradul de contaminare " << gradContaminare <<  std::endl;
+//suprascriere operator afisare
+std::ostream& operator<<(std::ostream &os, const Material& m)
+{
+    os << "Material din lotul: " << m.lotId << " Tip: " << m.tip << " Greutate: " << m.greutate 
+    << " kg Contaminare: " << m.gradContaminare * 100 << " % ";
+    return os;
 }
