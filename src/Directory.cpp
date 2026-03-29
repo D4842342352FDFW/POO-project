@@ -57,7 +57,9 @@ void Directory::display(int depth) const
 {
     for(int i = 0; i < depth; ++i)
         std::cout<<" ";
-    std::cout << timestamp << " Directory " << name << " has " << getSize() << "bytes total\n";
+    std::string time = ctime(&timestamp);
+    time.pop_back();
+    std::cout << time << " -> Directory " << name << " has " << getSize() << " bytes total\n";
 
     for(auto child : children)
     {

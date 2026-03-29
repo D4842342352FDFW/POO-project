@@ -73,7 +73,9 @@ Component* File::clone() const
 void File::display(int depth) const{
     for(int i = 0; i < depth; ++i)
         std::cout << " ";
-    std::cout<< timestamp << " File " << name << " has " << fileSize << "bytes\n";
+    std::string time = ctime(&timestamp);
+    time.pop_back();
+    std::cout<< time << " -> File " << name << " has " << fileSize << " bytes\n";
 }
 
 //getter de dimensiune fisier
