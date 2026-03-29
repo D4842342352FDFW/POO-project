@@ -79,6 +79,13 @@ build CMakeFiles/oop.dir/src/ImageFile.cpp.obj: CXX_COMPILER__oop_unscanned_ C$:
   OBJECT_FILE_DIR = CMakeFiles\oop.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\oop.dir
 
+build CMakeFiles/oop.dir/src/VideoFile.cpp.obj: CXX_COMPILER__oop_unscanned_ C$:/Users/Boy/Desktop/Proiect$ 1$ POO/POO-project/src/VideoFile.cpp || cmake_object_order_depends_target_oop
+  DEP_FILE = CMakeFiles\oop.dir\src\VideoFile.cpp.obj.d
+  FLAGS = -std=c++20 -Wall -Wextra -pedantic -Werror
+  OBJECT_DIR = CMakeFiles\oop.dir
+  OBJECT_FILE_DIR = CMakeFiles\oop.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\oop.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target oop
@@ -87,7 +94,7 @@ build CMakeFiles/oop.dir/src/ImageFile.cpp.obj: CXX_COMPILER__oop_unscanned_ C$:
 #############################################
 # Link the executable oop.exe
 
-build oop.exe: CXX_EXECUTABLE_LINKER__oop_ CMakeFiles/oop.dir/src/main.cpp.obj CMakeFiles/oop.dir/src/Component.cpp.obj CMakeFiles/oop.dir/src/Directory.cpp.obj CMakeFiles/oop.dir/src/File.cpp.obj CMakeFiles/oop.dir/src/ImageFile.cpp.obj
+build oop.exe: CXX_EXECUTABLE_LINKER__oop_ CMakeFiles/oop.dir/src/main.cpp.obj CMakeFiles/oop.dir/src/Component.cpp.obj CMakeFiles/oop.dir/src/Directory.cpp.obj CMakeFiles/oop.dir/src/File.cpp.obj CMakeFiles/oop.dir/src/ImageFile.cpp.obj CMakeFiles/oop.dir/src/VideoFile.cpp.obj
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\oop.dir
   POST_BUILD = cd .

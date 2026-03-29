@@ -1,21 +1,13 @@
 # ninja log v7
 21	562	7964863699341212	CMakeFiles/oop.dir/src/Component.cpp.obj	88261404f1235bcc
-20	585	7964885553223098	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
+18	543	7964898748535189	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
 25	736	7964863699341212	CMakeFiles/oop.dir/src/Directory.cpp.obj	274bb7eeb3f162b
 24	552	7964885553223098	CMakeFiles/oop.dir/src/File.cpp.obj	8b4c55d84f877786
-737	855	7964863706543381	oop.exe	ee97d8aed5d4d58c
-14	196	7964886085289957	build.ninja	80f5c75ac88dcf
-14	196	7964886085289957	C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/cmake_install.cmake	80f5c75ac88dcf
-23	533	7964886085849140	CMakeFiles/oop.dir/src/ImageFile.cpp.obj	972d6ad31876e9bc
-534	648	7964886091009692	oop.exe	ff1cffa9409895ec
-18	550	7964886408675251	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
-551	667	7964886413969665	oop.exe	ff1cffa9409895ec
-22	558	7964887788186838	CMakeFiles/oop.dir/src/ImageFile.cpp.obj	972d6ad31876e9bc
-18	589	7964887788176791	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
-589	707	7964887793882317	oop.exe	ff1cffa9409895ec
-17	543	7964888093615676	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
-544	660	7964888098776497	oop.exe	ff1cffa9409895ec
-20	566	7964888709912675	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
-567	688	7964888715367445	oop.exe	ff1cffa9409895ec
-20	572	7964888924792473	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
 573	685	7964888930341048	oop.exe	ff1cffa9409895ec
+15	185	7964899612304656	build.ninja	80f5c75ac88dcf
+15	185	7964899612250018	C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/cmake_install.cmake	80f5c75ac88dcf
+22	558	7964887788186838	CMakeFiles/oop.dir/src/ImageFile.cpp.obj	972d6ad31876e9bc
+15	187	7964899612304656	build.ninja	80f5c75ac88dcf
+15	187	7964899612304656	C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/cmake_install.cmake	80f5c75ac88dcf
+23	518	7964899612859212	CMakeFiles/oop.dir/src/VideoFile.cpp.obj	72909f3b8f0ca688
+519	630	7964899617812326	oop.exe	25db26fce0b545f6

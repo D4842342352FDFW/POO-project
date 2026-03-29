@@ -16,7 +16,8 @@ else()
 endif()
 
 # Main executable
-add_executable(${PROJECT_NAME} src/main.cpp src/Component.cpp src/Directory.cpp src/File.cpp src/ImageFile.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp src/Component.cpp src/Directory.cpp src/File.cpp src/ImageFile.cpp
+src/VideoFile.cpp )
 
 if(GITHUB_ACTIONS)
     message("NOTE: GITHUB_ACTIONS defined")

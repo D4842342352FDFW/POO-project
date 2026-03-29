@@ -4,6 +4,7 @@
 #include "../include/Directory.h"
 #include "../include/File.h"
 #include "../include/ImageFile.h"
+#include "../include/VideoFile.h"
 int main() {
 
     std::cout << Component::getInstanceCount() << '\n';
@@ -54,6 +55,10 @@ int main() {
     std::cout << '\n';
     std::cout << '\n';
     downloads->removeComponent("poza.png");
+    downloads->display(0);
+    VideoFile* video = new VideoFile("oala.mp3", 1920, 1080, 24, 60, 180.3, "mp3");
+    downloads->addComponent(video);
+    std::cout << '\n';
     downloads->display(0);
     return 0;
 }
