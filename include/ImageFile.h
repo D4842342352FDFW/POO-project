@@ -1,3 +1,4 @@
+#pragma once 
 #include "../include/Component.h"
 #include <string>
 

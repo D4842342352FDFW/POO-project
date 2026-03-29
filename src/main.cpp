@@ -5,6 +5,7 @@
 #include "../include/File.h"
 #include "../include/ImageFile.h"
 #include "../include/VideoFile.h"
+#include "../include/EncryptedFile.h"
 int main() {
 
     std::cout << Component::getInstanceCount() << '\n';
@@ -60,5 +61,13 @@ int main() {
     downloads->addComponent(video);
     std::cout << '\n';
     downloads->display(0);
+    EncryptedFile* file10 = new EncryptedFile("fisier.txt", "am fost la mare");
+    std::cout<< file10->readContent()<< '\n';
+    std::cout<< file10->readDecryptedContent()<<'\n';
+    file4->display(0);
+    root->addComponent(file10);
+    root->display(0);
+    EncryptedFile* file11 =file10;
+    file11->display(0);
     return 0;
 }
