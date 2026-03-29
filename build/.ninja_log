@@ -1,0 +1,6 @@
+# ninja log v7
+20	546	7964837908339337	CMakeFiles/oop.dir/src/Component.cpp.obj	88261404f1235bcc
+17	606	7964837908282334	CMakeFiles/oop.dir/src/main.cpp.obj	5fd1a3b18a0cd70f
+24	685	7964837908339337	CMakeFiles/oop.dir/src/Directory.cpp.obj	274bb7eeb3f162b
+13	576	7964839575070803	CMakeFiles/oop.dir/src/File.cpp.obj	8b4c55d84f877786
+577	741	7964839580731021	oop.exe	ee97d8aed5d4d58c

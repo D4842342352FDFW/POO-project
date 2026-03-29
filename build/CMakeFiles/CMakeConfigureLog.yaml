@@ -11,11 +11,11 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "C:/mingw64/share/cmake-4.2/Modules/CMakeMinGWFindMake.cmake:5 (find_program)"
+      - "C:/mingw64/share/cmake-4.2/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
       - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
-    description: "Path to a program."
+    description: "Program used to build from build.ninja files."
     settings:
       SearchFramework: "NEVER"
       SearchAppBundle: "NEVER"
@@ -25,11 +25,15 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "mingw32-make.exe"
+      - "ninja-build"
+      - "ninja"
+      - "samu"
     candidate_directories:
-      - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/mingw64/bin/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -41,6 +45,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -48,39 +53,244 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
-      - "/REGISTRY-NOTFOUND/bin/"
-      - "c:/MinGW/bin/"
-      - "/MinGW/bin/"
-      - "C:/Program Files/CodeBlocks/MinGW/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
-      - "C:/mingw64/bin/mingw32-make.exe.com"
-    found: "C:/mingw64/bin/mingw32-make.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/ninja-build.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/ninja-build.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/ninja-build"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/ninja.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/ninja.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/ninja"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/samu.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/samu.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/samu"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja-build.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja-build.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja-build"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/samu.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/samu.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/samu"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja-build.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja-build.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja-build"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/samu.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/samu.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/samu"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/ninja-build.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/ninja-build.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/ninja-build"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/ninja.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/ninja.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/ninja"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/samu.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/samu.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/samu"
+      - "C:/mingw64/bin/ninja-build.com"
+      - "C:/mingw64/bin/ninja-build.exe"
+      - "C:/mingw64/bin/ninja-build"
+      - "C:/mingw64/bin/ninja.com"
+    found: "C:/mingw64/bin/ninja.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:63 (find_program)"
+      - "C:/mingw64/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/mingw64/bin/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
+      - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
+      - "C:/Users/Boy/.dotnet/tools/"
+      - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
+    searched_directories:
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/cc.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/cc.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/cc"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/cl.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/cl.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/cl"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/bcc.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/bcc.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/bcc"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/xlc.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/xlc.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/xlc"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/icx.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/icx.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/icx"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/clang.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/clang.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/clang"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/cc.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/cc.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/cc"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/cl.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/cl.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/cl"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bcc.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bcc.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bcc"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/xlc.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/xlc.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/xlc"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/icx.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/icx.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/icx"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/clang.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/clang.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/clang"
+      - "C:/mingw64/bin/cc.com"
+      - "C:/mingw64/bin/cc.exe"
+      - "C:/mingw64/bin/cc"
+      - "C:/mingw64/bin/gcc.com"
+    found: "C:/mingw64/bin/gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
+        - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -108,30 +318,31 @@ events:
     found: "C:/mingw64/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "message-v1"
     backtrace:
@@ -175,7 +386,9 @@ events:
       - "ar"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -188,6 +401,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -195,35 +409,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/ar.com"
     found: "C:/mingw64/bin/ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -245,7 +461,9 @@ events:
       - "ranlib"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -258,6 +476,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -265,35 +484,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/ranlib.com"
     found: "C:/mingw64/bin/ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -315,7 +536,9 @@ events:
       - "strip"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -328,6 +551,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -335,35 +559,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/strip.com"
     found: "C:/mingw64/bin/strip.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -385,7 +611,9 @@ events:
       - "ld"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -398,6 +626,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -405,35 +634,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/ld.com"
     found: "C:/mingw64/bin/ld.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -455,7 +686,9 @@ events:
       - "nm"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -468,6 +701,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -475,35 +709,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/nm.com"
     found: "C:/mingw64/bin/nm.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -525,7 +761,9 @@ events:
       - "objdump"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -538,6 +776,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -545,35 +784,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/objdump.com"
     found: "C:/mingw64/bin/objdump.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -595,7 +836,9 @@ events:
       - "objcopy"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -608,6 +851,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -615,35 +859,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/objcopy.com"
     found: "C:/mingw64/bin/objcopy.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -665,7 +911,9 @@ events:
       - "readelf"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -678,6 +926,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -685,35 +934,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/readelf.com"
     found: "C:/mingw64/bin/readelf.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -735,7 +986,9 @@ events:
       - "dlltool"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -748,6 +1001,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -755,35 +1009,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/dlltool.com"
     found: "C:/mingw64/bin/dlltool.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -805,7 +1061,9 @@ events:
       - "addr2line"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -818,6 +1076,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -825,35 +1084,37 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/addr2line.com"
     found: "C:/mingw64/bin/addr2line.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -875,7 +1136,9 @@ events:
       - "tapi"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -888,6 +1151,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -895,13 +1159,20 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/tapi.com"
       - "C:/mingw64/bin/tapi.exe"
       - "C:/mingw64/bin/tapi"
-      - "C:/usr/bin/tapi.com"
-      - "C:/usr/bin/tapi.exe"
-      - "C:/usr/bin/tapi"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/tapi.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/tapi.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/tapi"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/tapi.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/tapi.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/tapi"
@@ -938,6 +1209,9 @@ events:
       - "C:/Program Files/Git/cmd/tapi.com"
       - "C:/Program Files/Git/cmd/tapi.exe"
       - "C:/Program Files/Git/cmd/tapi"
+      - "C:/Users/Boy/.local/bin/tapi.com"
+      - "C:/Users/Boy/.local/bin/tapi.exe"
+      - "C:/Users/Boy/.local/bin/tapi"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/tapi.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/tapi.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/tapi"
@@ -959,33 +1233,37 @@ events:
       - "C:/Program Files/swipl/bin/tapi.com"
       - "C:/Program Files/swipl/bin/tapi.exe"
       - "C:/Program Files/swipl/bin/tapi"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/tapi.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/tapi.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/tapi"
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -1010,7 +1288,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -1023,6 +1303,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -1030,13 +1311,20 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ar-15.2.com"
       - "C:/mingw64/bin/gcc-ar-15.2.exe"
       - "C:/mingw64/bin/gcc-ar-15.2"
-      - "C:/usr/bin/gcc-ar-15.2.com"
-      - "C:/usr/bin/gcc-ar-15.2.exe"
-      - "C:/usr/bin/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2"
@@ -1073,6 +1361,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ar-15.2.com"
       - "C:/Program Files/Git/cmd/gcc-ar-15.2.exe"
       - "C:/Program Files/Git/cmd/gcc-ar-15.2"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.2.com"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2"
@@ -1094,12 +1385,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ar-15.2.com"
       - "C:/Program Files/swipl/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/swipl/bin/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.2"
       - "C:/mingw64/bin/gcc-ar-15.com"
       - "C:/mingw64/bin/gcc-ar-15.exe"
       - "C:/mingw64/bin/gcc-ar-15"
-      - "C:/usr/bin/gcc-ar-15.com"
-      - "C:/usr/bin/gcc-ar-15.exe"
-      - "C:/usr/bin/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15"
@@ -1136,6 +1436,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ar-15.com"
       - "C:/Program Files/Git/cmd/gcc-ar-15.exe"
       - "C:/Program Files/Git/cmd/gcc-ar-15"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15"
@@ -1157,12 +1460,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ar-15.com"
       - "C:/Program Files/swipl/bin/gcc-ar-15.exe"
       - "C:/Program Files/swipl/bin/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15"
       - "C:/mingw64/bin/gcc-ar15.com"
       - "C:/mingw64/bin/gcc-ar15.exe"
       - "C:/mingw64/bin/gcc-ar15"
-      - "C:/usr/bin/gcc-ar15.com"
-      - "C:/usr/bin/gcc-ar15.exe"
-      - "C:/usr/bin/gcc-ar15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar15"
@@ -1199,6 +1511,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ar15.com"
       - "C:/Program Files/Git/cmd/gcc-ar15.exe"
       - "C:/Program Files/Git/cmd/gcc-ar15"
+      - "C:/Users/Boy/.local/bin/gcc-ar15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ar15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ar15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar15"
@@ -1220,34 +1535,38 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ar15.com"
       - "C:/Program Files/swipl/bin/gcc-ar15.exe"
       - "C:/Program Files/swipl/bin/gcc-ar15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar15"
       - "C:/mingw64/bin/gcc-ar.com"
     found: "C:/mingw64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -1272,7 +1591,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -1285,6 +1606,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -1292,13 +1614,20 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ranlib-15.2.com"
       - "C:/mingw64/bin/gcc-ranlib-15.2.exe"
       - "C:/mingw64/bin/gcc-ranlib-15.2"
-      - "C:/usr/bin/gcc-ranlib-15.2.com"
-      - "C:/usr/bin/gcc-ranlib-15.2.exe"
-      - "C:/usr/bin/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2"
@@ -1335,6 +1664,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.com"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.exe"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.2"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2"
@@ -1356,12 +1688,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.2"
       - "C:/mingw64/bin/gcc-ranlib-15.com"
       - "C:/mingw64/bin/gcc-ranlib-15.exe"
       - "C:/mingw64/bin/gcc-ranlib-15"
-      - "C:/usr/bin/gcc-ranlib-15.com"
-      - "C:/usr/bin/gcc-ranlib-15.exe"
-      - "C:/usr/bin/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15"
@@ -1398,6 +1739,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.com"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.exe"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15"
@@ -1419,12 +1763,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.com"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15"
       - "C:/mingw64/bin/gcc-ranlib15.com"
       - "C:/mingw64/bin/gcc-ranlib15.exe"
       - "C:/mingw64/bin/gcc-ranlib15"
-      - "C:/usr/bin/gcc-ranlib15.com"
-      - "C:/usr/bin/gcc-ranlib15.exe"
-      - "C:/usr/bin/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15"
@@ -1461,6 +1814,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ranlib15.com"
       - "C:/Program Files/Git/cmd/gcc-ranlib15.exe"
       - "C:/Program Files/Git/cmd/gcc-ranlib15"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib15"
@@ -1482,34 +1838,94 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ranlib15.com"
       - "C:/Program Files/swipl/bin/gcc-ranlib15.exe"
       - "C:/Program Files/swipl/bin/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib15"
       - "C:/mingw64/bin/gcc-ranlib.com"
     found: "C:/mingw64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
+      - "C:/mingw64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER"
+    description: "CXX compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "c++"
+      - "g++"
+      - "cl"
+      - "bcc"
+      - "icx"
+      - "clang++"
+    candidate_directories:
+      - "C:/mingw64/bin/"
+    searched_directories:
+      - "C:/mingw64/bin/c++.com"
+    found: "C:/mingw64/bin/c++.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\mingw64\\bin"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
+        - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -1537,30 +1953,31 @@ events:
     found: "C:/mingw64/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "message-v1"
     backtrace:
@@ -1570,7 +1987,7 @@ events:
       - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/mingw64/bin/g++.exe 
+      Compiler: C:/mingw64/bin/c++.exe 
       Build flags: 
       Id flags:  
       
@@ -1607,7 +2024,9 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -1620,6 +2039,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -1627,13 +2047,20 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ar-15.2.com"
       - "C:/mingw64/bin/gcc-ar-15.2.exe"
       - "C:/mingw64/bin/gcc-ar-15.2"
-      - "C:/usr/bin/gcc-ar-15.2.com"
-      - "C:/usr/bin/gcc-ar-15.2.exe"
-      - "C:/usr/bin/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2"
@@ -1670,6 +2097,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ar-15.2.com"
       - "C:/Program Files/Git/cmd/gcc-ar-15.2.exe"
       - "C:/Program Files/Git/cmd/gcc-ar-15.2"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.2.com"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.2"
@@ -1691,12 +2121,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ar-15.2.com"
       - "C:/Program Files/swipl/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/swipl/bin/gcc-ar-15.2"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.2.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.2"
       - "C:/mingw64/bin/gcc-ar-15.com"
       - "C:/mingw64/bin/gcc-ar-15.exe"
       - "C:/mingw64/bin/gcc-ar-15"
-      - "C:/usr/bin/gcc-ar-15.com"
-      - "C:/usr/bin/gcc-ar-15.exe"
-      - "C:/usr/bin/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15"
@@ -1733,6 +2172,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ar-15.com"
       - "C:/Program Files/Git/cmd/gcc-ar-15.exe"
       - "C:/Program Files/Git/cmd/gcc-ar-15"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ar-15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar-15"
@@ -1754,12 +2196,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ar-15.com"
       - "C:/Program Files/swipl/bin/gcc-ar-15.exe"
       - "C:/Program Files/swipl/bin/gcc-ar-15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar-15"
       - "C:/mingw64/bin/gcc-ar15.com"
       - "C:/mingw64/bin/gcc-ar15.exe"
       - "C:/mingw64/bin/gcc-ar15"
-      - "C:/usr/bin/gcc-ar15.com"
-      - "C:/usr/bin/gcc-ar15.exe"
-      - "C:/usr/bin/gcc-ar15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ar15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ar15"
@@ -1796,6 +2247,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ar15.com"
       - "C:/Program Files/Git/cmd/gcc-ar15.exe"
       - "C:/Program Files/Git/cmd/gcc-ar15"
+      - "C:/Users/Boy/.local/bin/gcc-ar15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ar15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ar15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ar15"
@@ -1817,34 +2271,38 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ar15.com"
       - "C:/Program Files/swipl/bin/gcc-ar15.exe"
       - "C:/Program Files/swipl/bin/gcc-ar15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ar15"
       - "C:/mingw64/bin/gcc-ar.com"
     found: "C:/mingw64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -1869,7 +2327,9 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -1882,6 +2342,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -1889,13 +2350,20 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
     searched_directories:
       - "C:/mingw64/bin/gcc-ranlib-15.2.com"
       - "C:/mingw64/bin/gcc-ranlib-15.2.exe"
       - "C:/mingw64/bin/gcc-ranlib-15.2"
-      - "C:/usr/bin/gcc-ranlib-15.2.com"
-      - "C:/usr/bin/gcc-ranlib-15.2.exe"
-      - "C:/usr/bin/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2"
@@ -1932,6 +2400,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.com"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.exe"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.2"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.2"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.2"
@@ -1953,12 +2424,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.2"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.2.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.2.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.2"
       - "C:/mingw64/bin/gcc-ranlib-15.com"
       - "C:/mingw64/bin/gcc-ranlib-15.exe"
       - "C:/mingw64/bin/gcc-ranlib-15"
-      - "C:/usr/bin/gcc-ranlib-15.com"
-      - "C:/usr/bin/gcc-ranlib-15.exe"
-      - "C:/usr/bin/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15"
@@ -1995,6 +2475,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.com"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15.exe"
       - "C:/Program Files/Git/cmd/gcc-ranlib-15"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib-15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib-15"
@@ -2016,12 +2499,21 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.com"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/swipl/bin/gcc-ranlib-15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib-15"
       - "C:/mingw64/bin/gcc-ranlib15.com"
       - "C:/mingw64/bin/gcc-ranlib15.exe"
       - "C:/mingw64/bin/gcc-ranlib15"
-      - "C:/usr/bin/gcc-ranlib15.com"
-      - "C:/usr/bin/gcc-ranlib15.exe"
-      - "C:/usr/bin/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15"
@@ -2058,6 +2550,9 @@ events:
       - "C:/Program Files/Git/cmd/gcc-ranlib15.com"
       - "C:/Program Files/Git/cmd/gcc-ranlib15.exe"
       - "C:/Program Files/Git/cmd/gcc-ranlib15"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib15.com"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib15.exe"
+      - "C:/Users/Boy/.local/bin/gcc-ranlib15"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib15.com"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib15.exe"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/gcc-ranlib15"
@@ -2079,34 +2574,38 @@ events:
       - "C:/Program Files/swipl/bin/gcc-ranlib15.com"
       - "C:/Program Files/swipl/bin/gcc-ranlib15.exe"
       - "C:/Program Files/swipl/bin/gcc-ranlib15"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib15.com"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib15.exe"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/gcc-ranlib15"
       - "C:/mingw64/bin/gcc-ranlib.com"
     found: "C:/mingw64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
   -
     kind: "find-v1"
     backtrace:
@@ -2130,9 +2629,11 @@ events:
       - "windres"
       - "windres"
     candidate_directories:
-      - "C:/mingw64/bin/"
-      - "C:/usr/bin/"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/mingw64/bin/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
       - "C:/Windows/System32/"
@@ -2144,6 +2645,7 @@ events:
       - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
       - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
       - "C:/Program Files/Git/cmd/"
+      - "C:/Users/Boy/.local/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Python/Launcher/"
       - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Program Files (x86)/CodeBlocks/MinGW/bin/"
@@ -2151,9 +2653,7 @@ events:
       - "C:/Users/Boy/AppData/Local/GitHubDesktop/bin/"
       - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/swipl/bin/"
-      - "/mingw64/bin/"
-      - "/mingw64/sbin/"
-      - "/mingw64/"
+      - "C:/Users/Boy/AppData/Local/Microsoft/WinGet/Packages/Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -2167,37 +2667,49 @@ events:
       - "C:/Program Files (x86)/oop/sbin/"
       - "C:/Program Files (x86)/oop/"
     searched_directories:
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/windres.com"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/windres.exe"
+      - "C:/Users/Boy/AppData/Local/fnm_multishells/18228_1774779338366/windres"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres.com"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres.exe"
+      - "C:/Users/Boy/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/windres.com"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/windres.exe"
+      - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/windres"
       - "C:/mingw64/bin/windres.com"
     found: "C:/mingw64/bin/windres.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Users\\Boy\\AppData\\Local\\fnm_multishells\\18228_1774779338366"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\Boy\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code"
         - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\mingw64\\bin"
-        - "C:\\usr\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code"
-        - "C:\\mingw64\\bin"
-        - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
         - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS\\system32"
         - "C:\\WINDOWS"
-        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
         - "C:\\Program Files\\dotnet\\"
-        - "C:/Program Files/Microsoft SQL Server/150/Tools/Binn/"
+        - "C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\"
         - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
-        - "C:/Program Files/Git/cmd"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\Boy\\.local\\bin"
         - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:/Users/Boy/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin"
-        - "C:/Users/Boy/.dotnet/tools"
+        - "C:\\Users\\Boy\\.dotnet\\tools"
         - "C:\\Users\\Boy\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:/Users/Boy/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Program Files\\swipl\\bin"
+        - "C:\\Users\\Boy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/oop"
       CMAKE_SYSTEM_PREFIX_PATH:
-        - "/mingw64"
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/mingw64"
@@ -2211,8 +2723,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h"
-      binary: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h"
+      source: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-i5tg8a"
+      binary: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-i5tg8a"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2221,13 +2733,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h'
+        Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-i5tg8a'
         
-        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_dcc4d/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_dcc4d.dir\\build.make CMakeFiles/cmTC_dcc4d.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h'
-        Building C object CMakeFiles/cmTC_dcc4d.dir/CMakeCCompilerABI.c.obj
-        C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_c07aa
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj -c C:/mingw64/share/cmake-4.2/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -2236,8 +2745,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dcc4d.dir\\'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_dcc4d.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccxS0g7O.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c07aa.dir/'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/mingw64/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c07aa.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccKQLnCH.s
         GNU C23 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -2256,14 +2765,13 @@ events:
          /mingw/include
         End of search list.
         Compiler executable checksum: a0d1fbf2dfd51cb2ed577f5408d30576
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dcc4d.dir\\'
-         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccxS0g7O.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c07aa.dir/'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccKQLnCH.s
         GNU assembler version 2.46.0 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r6) 2.46.0.20260210
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;/mingw/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../;/mingw/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_dcc4d.exe
-        C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_dcc4d.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe  -v -Wl,-v CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj -o cmTC_c07aa.exe -Wl,--out-implib,libcmTC_c07aa.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe
@@ -2275,16 +2783,12 @@ events:
         gcc version 15.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6) 
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;/mingw/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../;/mingw/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dcc4d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dcc4d.'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccNM3P2Z.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_dcc4d.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v --whole-archive CMakeFiles\\cmTC_dcc4d.dir/objects.a --no-whole-archive --out-implib libcmTC_dcc4d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c07aa.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c07aa.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccQXnGDQ.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_c07aa.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c07aa.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccNM3P2Z.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_dcc4d.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v --whole-archive CMakeFiles\\cmTC_dcc4d.dir/objects.a --no-whole-archive --out-implib libcmTC_dcc4d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccQXnGDQ.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_c07aa.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c07aa.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r6) 2.46.0.20260210
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dcc4d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dcc4d.'
-        C:\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_dcc4d.dir/objects.a
-        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_dcc4d.dir/objects.a @CMakeFiles\\cmTC_dcc4d.dir\\objects1.rsp
-        C:\\mingw64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_dcc4d.dir/objects.a -Wl,--no-whole-archive -o cmTC_dcc4d.exe -Wl,--out-implib,libcmTC_dcc4d.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c07aa.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c07aa.'
         
       exitCode: 0
   -
@@ -2321,13 +2825,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h']
+        ignore line: [Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-i5tg8a']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_dcc4d/fast]
-        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_dcc4d.dir\\build.make CMakeFiles/cmTC_dcc4d.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-0yuw9h']
-        ignore line: [Building C object CMakeFiles/cmTC_dcc4d.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_c07aa]
+        ignore line: [[1/2] C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj -c C:/mingw64/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -2336,8 +2837,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r6) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dcc4d.dir\\']
-        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_dcc4d.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccxS0g7O.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c07aa.dir/']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/mingw64/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_c07aa.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccKQLnCH.s]
         ignore line: [GNU C23 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r6) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -2356,8 +2857,8 @@ events:
         ignore line: [ /mingw/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: a0d1fbf2dfd51cb2ed577f5408d30576]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dcc4d.dir\\']
-        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccxS0g7O.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c07aa.dir/']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccKQLnCH.s]
         ignore line: [GNU assembler version 2.46.0 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r6) 2.46.0.20260210]
         ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/]
         ignore line: [C:/mingw64/bin/../libexec/gcc/]
@@ -2370,9 +2871,8 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
         ignore line: [/mingw/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dcc4d.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_dcc4d.exe]
-        ignore line: [C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_dcc4d.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe  -v -Wl -v CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj -o cmTC_c07aa.exe -Wl --out-implib libcmTC_c07aa.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe]
@@ -2393,13 +2893,13 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
         ignore line: [/mingw/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dcc4d.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dcc4d.']
-        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccNM3P2Z.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_dcc4d.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v --whole-archive CMakeFiles\\cmTC_dcc4d.dir/objects.a --no-whole-archive --out-implib libcmTC_dcc4d.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c07aa.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_c07aa.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccQXnGDQ.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_c07aa.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_c07aa.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccNM3P2Z.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccQXnGDQ.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -2421,7 +2921,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_dcc4d.exe] ==> ignore
+          arg [cmTC_c07aa.exe] ==> ignore
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o]
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0]
@@ -2433,11 +2933,9 @@ events:
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..]
           arg [-L/mingw/lib] ==> dir [/mingw/lib]
           arg [-v] ==> ignore
-          arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_dcc4d.dir/objects.a] ==> ignore
-          arg [--no-whole-archive] ==> ignore
+          arg [CMakeFiles/cmTC_c07aa.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_dcc4d.dll.a] ==> ignore
+          arg [libcmTC_c07aa.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -2521,8 +3019,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn"
-      binary: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn"
+      source: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-z3duf4"
+      binary: "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-z3duf4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2532,23 +3030,20 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn'
+        Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-z3duf4'
         
-        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_caf40/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_caf40.dir\\build.make CMakeFiles/cmTC_caf40.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn'
-        Building CXX object CMakeFiles/cmTC_caf40.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\mingw64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_537c9
+        [1/2] C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj -c C:/mingw64/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=C:\\mingw64\\bin\\g++.exe
+        COLLECT_GCC=C:\\mingw64\\bin\\c++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
         Target: x86_64-w64-mingw32
         Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-15.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --enable-libgdiagnostics --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-15.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_caf40.dir\\'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_caf40.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccyqOLR8.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_537c9.dir/'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/mingw64/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_537c9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccLKt7rj.s
         GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -2573,16 +3068,15 @@ events:
          /mingw/include
         End of search list.
         Compiler executable checksum: 7b295d21dc2572e6137fe4c927535948
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_caf40.dir\\'
-         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccyqOLR8.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_537c9.dir/'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccLKt7rj.s
         GNU assembler version 2.46.0 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r6) 2.46.0.20260210
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;/mingw/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../;/mingw/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_caf40.exe
-        C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_caf40.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe  -v -Wl,-v CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_537c9.exe -Wl,--out-implib,libcmTC_537c9.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
-        COLLECT_GCC=C:\\mingw64\\bin\\g++.exe
+        COLLECT_GCC=C:\\mingw64\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
         Target: x86_64-w64-mingw32
@@ -2592,16 +3086,12 @@ events:
         gcc version 15.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6) 
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;/mingw/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../;/mingw/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_caf40.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_caf40.'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccMdP0cg.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_caf40.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v --whole-archive CMakeFiles\\cmTC_caf40.dir/objects.a --no-whole-archive --out-implib libcmTC_caf40.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_537c9.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_537c9.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccVdhCMo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_537c9.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_537c9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccMdP0cg.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_caf40.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v --whole-archive CMakeFiles\\cmTC_caf40.dir/objects.a --no-whole-archive --out-implib libcmTC_caf40.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccVdhCMo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_537c9.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_537c9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r6) 2.46.0.20260210
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_caf40.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_caf40.'
-        C:\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_caf40.dir/objects.a
-        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_caf40.dir/objects.a @CMakeFiles\\cmTC_caf40.dir\\objects1.rsp
-        C:\\mingw64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_caf40.dir/objects.a -Wl,--no-whole-archive -o cmTC_caf40.exe -Wl,--out-implib,libcmTC_caf40.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_537c9.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_537c9.'
         
       exitCode: 0
   -
@@ -2644,23 +3134,20 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn']
+        ignore line: [Change Dir: 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-z3duf4']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_caf40/fast]
-        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_caf40.dir\\build.make CMakeFiles/cmTC_caf40.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/CMakeScratch/TryCompile-5hivyn']
-        ignore line: [Building CXX object CMakeFiles/cmTC_caf40.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\mingw64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_537c9]
+        ignore line: [[1/2] C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj -c C:/mingw64/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\g++.exe]
+        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\c++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
         ignore line: [Target: x86_64-w64-mingw32]
         ignore line: [Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-15.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r6' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --enable-libgdiagnostics --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-15.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r6) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_caf40.dir\\']
-        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_caf40.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccyqOLR8.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_537c9.dir/']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/mingw64/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_537c9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\Boy\\AppData\\Local\\Temp\\ccLKt7rj.s]
         ignore line: [GNU C++17 (MinGW-W64 x86_64-ucrt-posix-seh  built by Brecht Sanders  r6) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -2685,8 +3172,8 @@ events:
         ignore line: [ /mingw/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 7b295d21dc2572e6137fe4c927535948]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_caf40.dir\\']
-        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccyqOLR8.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_537c9.dir/']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\Boy\\AppData\\Local\\Temp\\ccLKt7rj.s]
         ignore line: [GNU assembler version 2.46.0 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r6) 2.46.0.20260210]
         ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/]
         ignore line: [C:/mingw64/bin/../libexec/gcc/]
@@ -2699,11 +3186,10 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
         ignore line: [/mingw/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_caf40.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_caf40.exe]
-        ignore line: [C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_caf40.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe  -v -Wl -v CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_537c9.exe -Wl --out-implib libcmTC_537c9.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\g++.exe]
+        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -2722,13 +3208,13 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
         ignore line: [/mingw/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_caf40.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_caf40.']
-        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccMdP0cg.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_caf40.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v --whole-archive CMakeFiles\\cmTC_caf40.dir/objects.a --no-whole-archive --out-implib libcmTC_caf40.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_537c9.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_537c9.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccVdhCMo.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_537c9.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -L/mingw/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -L/mingw/lib -v CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_537c9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccMdP0cg.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\Boy\\AppData\\Local\\Temp\\ccVdhCMo.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -2750,7 +3236,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_caf40.exe] ==> ignore
+          arg [cmTC_537c9.exe] ==> ignore
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o]
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0]
@@ -2762,11 +3248,9 @@ events:
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..]
           arg [-L/mingw/lib] ==> dir [/mingw/lib]
           arg [-v] ==> ignore
-          arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_caf40.dir/objects.a] ==> ignore
-          arg [--no-whole-archive] ==> ignore
+          arg [CMakeFiles/cmTC_537c9.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_caf40.dll.a] ==> ignore
+          arg [libcmTC_537c9.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
