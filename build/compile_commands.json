@@ -1,0 +1,50 @@
+[
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\main.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\main.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/main.cpp",
+  "output": "CMakeFiles/oop.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\Component.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\Component.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Component.cpp",
+  "output": "CMakeFiles/oop.dir/src/Component.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\Directory.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\Directory.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Directory.cpp",
+  "output": "CMakeFiles/oop.dir/src/Directory.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\File.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\File.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/File.cpp",
+  "output": "CMakeFiles/oop.dir/src/File.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\ImageFile.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\ImageFile.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/ImageFile.cpp",
+  "output": "CMakeFiles/oop.dir/src/ImageFile.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\VideoFile.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\VideoFile.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/VideoFile.cpp",
+  "output": "CMakeFiles/oop.dir/src/VideoFile.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\EncryptedFile.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\EncryptedFile.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/EncryptedFile.cpp",
+  "output": "CMakeFiles/oop.dir/src/EncryptedFile.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\CompressedFile.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\CompressedFile.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/CompressedFile.cpp",
+  "output": "CMakeFiles/oop.dir/src/CompressedFile.cpp.obj"
+}
+]
