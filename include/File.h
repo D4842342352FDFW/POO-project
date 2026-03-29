@@ -30,6 +30,9 @@ class File : public Component{
     //getter de dimensiune
     size_t getSize() const override;
 
+    //setter nume 
+    void setName(const std::string& name);
+    
     //functii de citire continut fisiere
     virtual std::string readContent() const;
 };

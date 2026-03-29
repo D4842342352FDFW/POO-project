@@ -36,6 +36,7 @@ int main() {
     std::cout << '\n';
     Directory* downloads = new Directory("downloads");
     downloads = root;
+    downloads->setName("downloads");
     downloads->display(0);
     return 0;
 }

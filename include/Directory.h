@@ -31,6 +31,9 @@ class Directory : public Component{
     size_t getSize() const override;
     const std::vector<Component*>& getChildren() const;
 
+    //setter nume
+    void setName(const std::string& name);
+
     //functii de adaugare stergere si cautare de componenta in 
     //in structura arborescenta
     void addComponent(Component* component);

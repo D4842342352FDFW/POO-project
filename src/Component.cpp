@@ -29,7 +29,7 @@ Directory* Component::getParent() const{
     return parent;
 }
 
-//setter parinte 
+//setter
 void Component::setParent(Directory* newParent)
 {
     parent = newParent;

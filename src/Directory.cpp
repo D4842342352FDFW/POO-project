@@ -82,6 +82,12 @@ const std::vector<Component*>& Directory::getChildren() const{
     return children;
 }
 
+//setter nume
+void Directory::setName(const std::string& name)
+{
+    this->name = name;
+}
+
 //adagare componenta 
 void Directory::addComponent(Component* component)
 {

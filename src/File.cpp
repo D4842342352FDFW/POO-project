@@ -83,6 +83,12 @@ size_t File::getSize() const
 {
     return fileSize;
 }
+//setter nume 
+//setter nume
+void File::setName(const std::string& name)
+{
+    this->name = name;
+}
 
 //afisare continut
 std::string File::readContent() const{
