@@ -1,6 +1,5 @@
 #include "../include/Component.h"
-#include <string_view>
-
+#include <string>
 class File : public Component{
     protected:
     //date text file
@@ -32,7 +31,7 @@ class File : public Component{
 
     //setter nume 
     void setName(const std::string& name);
-    
+
     //functii de citire continut fisiere
     virtual std::string readContent() const;
 };

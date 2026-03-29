@@ -1,7 +1,6 @@
 #include "../include/File.h"
 #include <iostream>
-#include <iomanip>
-#include <cstring>
+#include <string>
 
 //functia de clear fisier text
 void File::freeResource()

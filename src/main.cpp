@@ -3,6 +3,7 @@
 #include "../include/Component.h"
 #include "../include/Directory.h"
 #include "../include/File.h"
+#include "../include/ImageFile.h"
 int main() {
 
     std::cout << Component::getInstanceCount() << '\n';
@@ -37,6 +38,22 @@ int main() {
     Directory* downloads = new Directory("downloads");
     downloads = root;
     downloads->setName("downloads");
+    downloads->display(0);
+    ImageFile* imagine = new ImageFile("poza.png", 1024, 512, 4, "png");
+    ImageFile* copie = imagine;
+    std::cout << '\n';
+    std::cout << '\n';
+    std::cout << '\n';
+    copie->display(0);
+    std::cout << '\n';
+    std::cout << '\n';
+    std::cout << '\n';
+    downloads->addComponent(imagine);
+    downloads->display(0);
+    std::cout << '\n';
+    std::cout << '\n';
+    std::cout << '\n';
+    downloads->removeComponent("poza.png");
     downloads->display(0);
     return 0;
 }
