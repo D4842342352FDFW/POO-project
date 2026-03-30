@@ -78,7 +78,10 @@ int main() {
     std:: cout<< fileidk->getSize() << '\n';
 
 
-    CompressedFile* fileidk2 = new CompressedFile("no.json", "AABA");
+    std::cout << '\n';
+    std::cout << '\n';
+    std::cout << '\n';
+    CompressedFile* fileidk2 = new CompressedFile("no.json", "AABB");
     std::cout << fileidk2->readContent()<< '\n';
     std:: cout<< fileidk2->getSize() << '\n';
     std::cout << fileidk2->readDecompressedContent()<< '\n';

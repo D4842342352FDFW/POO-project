@@ -93,7 +93,7 @@ std::string CompressedFile::encodeToBits() const{
     for(size_t i = 0; i < fileSize; ++i)
     {
         unsigned char c = data[i];
-        bitStream = bitStream + codeTable.at(c);
+        bitStream += codeTable.at(c);
     }
     return bitStream;
 }
@@ -135,10 +135,9 @@ std::string CompressedFile::decodeFromBits(const std::vector<unsigned char>& com
             node = root;
             charactersRecovered++;
             if(charactersRecovered == originalSize)
-                return result;  
+                return result; 
         }
     }
-
     return result;
 }
 
@@ -146,6 +145,7 @@ std::string CompressedFile::decodeFromBits(const std::vector<unsigned char>& com
 CompressedFile::CompressedFile(const std::string& name, const std::string& content)
 :File(name, content)
 {
+    compressed = false;
     compress();
 }
 
@@ -156,7 +156,6 @@ void CompressedFile::compress()
         return;
 
     originalSize = fileSize;
-
     buildHuffmanTree();
     std::string bitStream = encodeToBits();
 
@@ -188,12 +187,12 @@ void CompressedFile::compress()
 
     delete[] data;
     fileSize = encoded.size();
-    data = new char[fileSize];
+    data = new char[fileSize + 1];
     for(size_t i = 0; i < fileSize; ++i)
     {
         data[i] = encoded[i];
     }
-
+    data[fileSize] = '\0';
     compressedData = std::move(encoded);
     compressed = true;
 }
@@ -208,11 +207,12 @@ void CompressedFile::decompress()
 
     delete[] data;
     fileSize = decoded.size();
-    data = new char[fileSize];
+    data = new char[fileSize + 1];
     for(size_t i = 0; i < fileSize; ++i)
     {
         data[i] = decoded[i];
     }
+    data[fileSize] = '\0';
 
     compressed = false;
 }
@@ -228,7 +228,7 @@ void CompressedFile::display(int depth) const{
     if(compressed) 
         std::cout << " state : compressed\n";
     else
-        std::cout << " state : uncompressed\n";
+        std::cout << " state : decompressed\n";
 }
 
 //getter de dimensiune 
@@ -244,7 +244,7 @@ std::string CompressedFile::readContent() const{
 //afisare continut decompresat
 std::string CompressedFile ::readDecompressedContent(){
     if(compressed == false)
-        return "";
+        return File::readContent();
     if(!data || fileSize == 0)
         return "";
     this->decompress();
