@@ -317,6 +317,30 @@ src/ImageFile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/ImageFile.cpp.s
 .PHONY : src/ImageFile.cpp.s
 
+src/SecureArchive.obj: src/SecureArchive.cpp.obj
+.PHONY : src/SecureArchive.obj
+
+# target to build an object file
+src/SecureArchive.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/SecureArchive.cpp.obj
+.PHONY : src/SecureArchive.cpp.obj
+
+src/SecureArchive.i: src/SecureArchive.cpp.i
+.PHONY : src/SecureArchive.i
+
+# target to preprocess a source file
+src/SecureArchive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/SecureArchive.cpp.i
+.PHONY : src/SecureArchive.cpp.i
+
+src/SecureArchive.s: src/SecureArchive.cpp.s
+.PHONY : src/SecureArchive.s
+
+# target to generate assembly for a file
+src/SecureArchive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/SecureArchive.cpp.s
+.PHONY : src/SecureArchive.cpp.s
+
 src/VideoFile.obj: src/VideoFile.cpp.obj
 .PHONY : src/VideoFile.obj
 
@@ -396,6 +420,9 @@ help:
 	@echo ... src/ImageFile.obj
 	@echo ... src/ImageFile.i
 	@echo ... src/ImageFile.s
+	@echo ... src/SecureArchive.obj
+	@echo ... src/SecureArchive.i
+	@echo ... src/SecureArchive.s
 	@echo ... src/VideoFile.obj
 	@echo ... src/VideoFile.i
 	@echo ... src/VideoFile.s

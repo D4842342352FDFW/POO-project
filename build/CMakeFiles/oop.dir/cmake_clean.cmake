@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/oop.dir/src/File.cpp.obj.d"
   "CMakeFiles/oop.dir/src/ImageFile.cpp.obj"
   "CMakeFiles/oop.dir/src/ImageFile.cpp.obj.d"
+  "CMakeFiles/oop.dir/src/SecureArchive.cpp.obj"
+  "CMakeFiles/oop.dir/src/SecureArchive.cpp.obj.d"
   "CMakeFiles/oop.dir/src/VideoFile.cpp.obj"
   "CMakeFiles/oop.dir/src/VideoFile.cpp.obj.d"
   "CMakeFiles/oop.dir/src/main.cpp.obj"

@@ -7,6 +7,7 @@
 #include "../include/VideoFile.h"
 #include "../include/EncryptedFile.h"
 #include "../include/CompressedFile.h"
+#include "../include/SecureArchive.h"
 int main() {
 
     // std::cout << Component::getInstanceCount() << '\n';
@@ -85,8 +86,18 @@ int main() {
     std::cout << fileidk2->readContent()<< '\n';
     std:: cout<< fileidk2->getSize() << '\n';
     std::cout << fileidk2->readDecompressedContent()<< '\n';
-    fileidk->decompress();
+    fileidk2->decompress();
     std:: cout<< fileidk2->getSize() << '\n';
     fileidk2->display(0);
+
+    std::cout << '\n';
+    std::cout << '\n';
+    std::cout << '\n';
+    SecureArchive* arhiva = new SecureArchive("arhiva.zip", "nu stiu ce sa zic");
+    std::cout << arhiva->readContent() << '\n';
+    std::cout << arhiva->readDecryptedAndDecompressedContentContent() << '\n';
+    std::cout << arhiva->getSize() << '\n';
+    arhiva->decryptAndDecompress();
+    std::cout << arhiva->getSize() << '\n';
     return 0;
 }

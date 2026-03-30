@@ -1,3 +1,4 @@
+#pragma once
 #include "File.h"
 #include <vector>
 #include <unordered_map>
