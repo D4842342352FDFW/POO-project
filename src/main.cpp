@@ -8,8 +8,25 @@
 #include "../include/EncryptedFile.h"
 #include "../include/CompressedFile.h"
 #include "../include/SecureArchive.h"
+#include "../include/Exception.h"
+#include "../include/Manager.h"
+#include "../include/Menu.h"
 int main() {
 
+    Menu terminal;
+    terminal.run();
+    Manager::destroyInstance();
+
+    std::cout << "\nFinal Instance Count: " << Component::getInstanceCount() << '\n';
+
+    if(Component::getInstanceCount() == 0)
+    {
+        std::cout << "Memory clean: Success\n";
+    }
+    else
+    {
+        std::cout << "Memory clean: Failed\n";
+    }
     // std::cout << Component::getInstanceCount() << '\n';
     // Directory* root = new Directory("root");
     // File* file1 = new File("bla.txt", "cartea de citit");
@@ -71,33 +88,33 @@ int main() {
     // root->display(0);
     // EncryptedFile* file11 =file10;
     // file11->display(0);
-    CompressedFile* fileidk = new CompressedFile("noidea.json", "am o casa la mare si una la munte");
-    std::cout << fileidk->readContent()<< '\n';
-    std:: cout<< fileidk->getSize() << '\n';
-    std::cout << fileidk->readDecompressedContent()<< '\n';
-    fileidk->decompress();
-    std:: cout<< fileidk->getSize() << '\n';
+    // CompressedFile* fileidk = new CompressedFile("noidea.json", "am o casa la mare si una la munte");
+    // std::cout << fileidk->readContent()<< '\n';
+    // std:: cout<< fileidk->getSize() << '\n';
+    // std::cout << fileidk->readDecompressedContent()<< '\n';
+    // fileidk->decompress();
+    // std:: cout<< fileidk->getSize() << '\n';
 
 
-    std::cout << '\n';
-    std::cout << '\n';
-    std::cout << '\n';
-    CompressedFile* fileidk2 = new CompressedFile("no.json", "AABB");
-    std::cout << fileidk2->readContent()<< '\n';
-    std:: cout<< fileidk2->getSize() << '\n';
-    std::cout << fileidk2->readDecompressedContent()<< '\n';
-    fileidk2->decompress();
-    std:: cout<< fileidk2->getSize() << '\n';
-    fileidk2->display(0);
+    // std::cout << '\n';
+    // std::cout << '\n';
+    // std::cout << '\n';
+    // CompressedFile* fileidk2 = new CompressedFile("no.json", "AABB");
+    // std::cout << fileidk2->readContent()<< '\n';
+    // std:: cout<< fileidk2->getSize() << '\n';
+    // std::cout << fileidk2->readDecompressedContent()<< '\n';
+    // fileidk2->decompress();
+    // std:: cout<< fileidk2->getSize() << '\n';
+    // fileidk2->display(0);
 
-    std::cout << '\n';
-    std::cout << '\n';
-    std::cout << '\n';
-    SecureArchive* arhiva = new SecureArchive("arhiva.zip", "nu stiu ce sa zic");
-    std::cout << arhiva->readContent() << '\n';
-    std::cout << arhiva->readDecryptedAndDecompressedContentContent() << '\n';
-    std::cout << arhiva->getSize() << '\n';
-    arhiva->decryptAndDecompress();
-    std::cout << arhiva->getSize() << '\n';
+    // std::cout << '\n';
+    // std::cout << '\n';
+    // std::cout << '\n';
+    // SecureArchive* arhiva = new SecureArchive("arhiva.zip", "nu stiu ce sa zic");
+    // std::cout << arhiva->readContent() << '\n';
+    // std::cout << arhiva->readDecryptedAndDecompressedContentContent() << '\n';
+    // std::cout << arhiva->getSize() << '\n';
+    // arhiva->decryptAndDecompress();
+    // std::cout << arhiva->getSize() << '\n';
     return 0;
 }

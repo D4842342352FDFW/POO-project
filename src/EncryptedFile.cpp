@@ -7,6 +7,14 @@ EncryptedFile::EncryptedFile(const std::string& name, const std::string& content
     encrypt();
 }
 
+EncryptedFile::EncryptedFile(const std::string& name, const std::string& content, bool shouldEncrypt) : File(name, content)
+{
+    if(shouldEncrypt)
+    {
+        encrypt();
+    }
+}
+
 //functia de criptare
 void EncryptedFile::encrypt()
 {

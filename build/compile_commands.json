@@ -52,5 +52,17 @@
   "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\SecureArchive.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\SecureArchive.cpp\"",
   "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/SecureArchive.cpp",
   "output": "CMakeFiles/oop.dir/src/SecureArchive.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\Manager.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\Manager.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Manager.cpp",
+  "output": "CMakeFiles/oop.dir/src/Manager.cpp.obj"
+},
+{
+  "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\Menu.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\Menu.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Menu.cpp",
+  "output": "CMakeFiles/oop.dir/src/Menu.cpp.obj"
 }
 ]

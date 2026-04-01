@@ -26,6 +26,9 @@ class ImageFile : public Component{
     //functia afisare date
     void display(int depth) const override;
 
+    //fisier, nu folder
+    bool isDirectory() const override { return false; }
+
     //getter de dimensiune
     size_t getSize() const override;
 

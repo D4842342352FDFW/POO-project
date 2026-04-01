@@ -149,6 +149,16 @@ CompressedFile::CompressedFile(const std::string& name, const std::string& conte
     compress();
 }
 
+CompressedFile::CompressedFile(const std::string& name, const std::string& content, bool shouldCompress)
+:File(name, content)
+{
+    compressed = false;
+    if(shouldCompress)
+    {
+        compress();
+    }
+}
+
 //functia de compresare
 void CompressedFile::compress()
 {
@@ -225,10 +235,6 @@ void CompressedFile::display(int depth) const{
     time.pop_back();
     
     std::cout<< time << " -> Compressed File " << name << " has " << fileSize << " bytes\n";
-    if(compressed) 
-        std::cout << " state : compressed\n";
-    else
-        std::cout << " state : decompressed\n";
 }
 
 //getter de dimensiune 

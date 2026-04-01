@@ -33,6 +33,9 @@ class Component{
     std::string getName() const;
     Directory* getParent() const;
     
+    //director sau fisier
+    virtual bool isDirectory() const = 0;
+    
     //setter parent 
     void setParent(Directory* newParent);
 };

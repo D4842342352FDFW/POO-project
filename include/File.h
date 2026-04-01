@@ -30,6 +30,8 @@ class File : public Component{
     //getter de dimensiune
     size_t getSize() const override;
 
+    //fisier, nu folder
+    bool isDirectory() const override { return false; }
     //setter nume 
     void setName(const std::string& name);
 

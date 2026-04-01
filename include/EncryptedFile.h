@@ -25,6 +25,7 @@ class EncryptedFile : virtual public File{
     public:
     //constructor
     EncryptedFile(const std::string& name, const std::string& content);
+    EncryptedFile(const std::string& name, const std::string& content, bool shouldEncrypt);
 
     //functiile de conversie
     void encrypt();

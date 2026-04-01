@@ -3,7 +3,7 @@
 
 //constructor
 SecureArchive::SecureArchive(const std::string& name, const std::string& content)
-: File(name, content), EncryptedFile(name, content), CompressedFile(name, content)
+: File(name, content), EncryptedFile(name, content, false), CompressedFile(name, content, false)
 {
     compress();
     encrypt();

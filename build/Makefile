@@ -317,6 +317,54 @@ src/ImageFile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/ImageFile.cpp.s
 .PHONY : src/ImageFile.cpp.s
 
+src/Manager.obj: src/Manager.cpp.obj
+.PHONY : src/Manager.obj
+
+# target to build an object file
+src/Manager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/Manager.cpp.obj
+.PHONY : src/Manager.cpp.obj
+
+src/Manager.i: src/Manager.cpp.i
+.PHONY : src/Manager.i
+
+# target to preprocess a source file
+src/Manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/Manager.cpp.i
+.PHONY : src/Manager.cpp.i
+
+src/Manager.s: src/Manager.cpp.s
+.PHONY : src/Manager.s
+
+# target to generate assembly for a file
+src/Manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/Manager.cpp.s
+.PHONY : src/Manager.cpp.s
+
+src/Menu.obj: src/Menu.cpp.obj
+.PHONY : src/Menu.obj
+
+# target to build an object file
+src/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/Menu.cpp.obj
+.PHONY : src/Menu.cpp.obj
+
+src/Menu.i: src/Menu.cpp.i
+.PHONY : src/Menu.i
+
+# target to preprocess a source file
+src/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/Menu.cpp.i
+.PHONY : src/Menu.cpp.i
+
+src/Menu.s: src/Menu.cpp.s
+.PHONY : src/Menu.s
+
+# target to generate assembly for a file
+src/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\oop.dir\build.make CMakeFiles/oop.dir/src/Menu.cpp.s
+.PHONY : src/Menu.cpp.s
+
 src/SecureArchive.obj: src/SecureArchive.cpp.obj
 .PHONY : src/SecureArchive.obj
 
@@ -420,6 +468,12 @@ help:
 	@echo ... src/ImageFile.obj
 	@echo ... src/ImageFile.i
 	@echo ... src/ImageFile.s
+	@echo ... src/Manager.obj
+	@echo ... src/Manager.i
+	@echo ... src/Manager.s
+	@echo ... src/Menu.obj
+	@echo ... src/Menu.i
+	@echo ... src/Menu.s
 	@echo ... src/SecureArchive.obj
 	@echo ... src/SecureArchive.i
 	@echo ... src/SecureArchive.s

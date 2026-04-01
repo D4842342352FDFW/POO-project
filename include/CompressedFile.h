@@ -42,6 +42,7 @@ class CompressedFile : virtual public File{
 
     //constructor
     CompressedFile(const std::string& name, const std::string& content);
+    CompressedFile(const std::string& name, const std::string& content, bool shouldCompress);
 
     //compresare + decompresarea
     void compress();

@@ -13,7 +13,7 @@ VideoFile::VideoFile(const std::string& name, const int width, const int height,
 
 //copy consturtor 
 VideoFile::VideoFile(const VideoFile& other) : Component(other.getName()), width(other.width), height(other.height),
-bpp(other.bpp), format(other.format), videoSize(other.videoSize){}
+bpp(other.bpp), fps(other.fps), duration(other.duration), format(other.format), videoSize(other.videoSize){}
 
 //suprascrierea operatorului de atribuire
 VideoFile& VideoFile::operator=(const VideoFile& other)
@@ -24,6 +24,8 @@ VideoFile& VideoFile::operator=(const VideoFile& other)
         this->width = other.width;
         this->height = other.height;
         this->bpp = other.bpp;
+        this->fps = other.fps;
+        this->duration = other.duration;
         this->format = other.format;
         this->videoSize = other.videoSize;
     }

@@ -30,6 +30,11 @@ class Directory : public Component{
 
     //getter size + copii 
     size_t getSize() const override;
+
+    //folder, nu fisier
+    bool isDirectory() const override { return true; }
+    
+    //setter nume 
     const std::vector<Component*>& getChildren() const;
 
     //setter nume
