@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/main.cpp" "CMakeFiles/oop.dir/main.cpp.obj" "gcc" "CMakeFiles/oop.dir/main.cpp.obj.d"
   "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Component.cpp" "CMakeFiles/oop.dir/src/Component.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/Component.cpp.obj.d"
   "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/CompressedFile.cpp" "CMakeFiles/oop.dir/src/CompressedFile.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/CompressedFile.cpp.obj.d"
   "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Directory.cpp" "CMakeFiles/oop.dir/src/Directory.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/Directory.cpp.obj.d"
@@ -18,7 +19,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/Menu.cpp" "CMakeFiles/oop.dir/src/Menu.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/Menu.cpp.obj.d"
   "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/SecureArchive.cpp" "CMakeFiles/oop.dir/src/SecureArchive.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/SecureArchive.cpp.obj.d"
   "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/VideoFile.cpp" "CMakeFiles/oop.dir/src/VideoFile.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/VideoFile.cpp.obj.d"
-  "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/main.cpp" "CMakeFiles/oop.dir/src/main.cpp.obj" "gcc" "CMakeFiles/oop.dir/src/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

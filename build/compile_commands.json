@@ -1,9 +1,9 @@
 [
 {
   "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",
-  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\src\\main.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\src\\main.cpp\"",
-  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/src/main.cpp",
-  "output": "CMakeFiles/oop.dir/src/main.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -std=c++20 -Wall -Wextra -pedantic -Werror -o CMakeFiles\\oop.dir\\main.cpp.obj -c \"C:\\Users\\Boy\\Desktop\\Proiect 1 POO\\POO-project\\main.cpp\"",
+  "file": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/main.cpp",
+  "output": "CMakeFiles/oop.dir/main.cpp.obj"
 },
 {
   "directory": "C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build",

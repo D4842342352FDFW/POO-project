@@ -1,16 +1,16 @@
 #include <iostream>
 #include <string>
-#include "../include/Component.h"
-#include "../include/Directory.h"
-#include "../include/File.h"
-#include "../include/ImageFile.h"
-#include "../include/VideoFile.h"
-#include "../include/EncryptedFile.h"
-#include "../include/CompressedFile.h"
-#include "../include/SecureArchive.h"
-#include "../include/Exception.h"
-#include "../include/Manager.h"
-#include "../include/Menu.h"
+#include "include/Component.h"
+#include "include/Directory.h"
+#include "include/File.h"
+#include "include/ImageFile.h"
+#include "include/VideoFile.h"
+#include "include/EncryptedFile.h"
+#include "include/CompressedFile.h"
+#include "include/SecureArchive.h"
+#include "include/Exception.h"
+#include "include/Manager.h"
+#include "include/Menu.h"
 int main() {
 
     Menu terminal;

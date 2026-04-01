@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/oop.dir/main.cpp.obj"
+  "CMakeFiles/oop.dir/main.cpp.obj.d"
   "CMakeFiles/oop.dir/src/Component.cpp.obj"
   "CMakeFiles/oop.dir/src/Component.cpp.obj.d"
   "CMakeFiles/oop.dir/src/CompressedFile.cpp.obj"
@@ -19,8 +21,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/oop.dir/src/SecureArchive.cpp.obj.d"
   "CMakeFiles/oop.dir/src/VideoFile.cpp.obj"
   "CMakeFiles/oop.dir/src/VideoFile.cpp.obj.d"
-  "CMakeFiles/oop.dir/src/main.cpp.obj"
-  "CMakeFiles/oop.dir/src/main.cpp.obj.d"
   "liboop.dll.a"
   "oop.exe"
   "oop.exe.manifest"

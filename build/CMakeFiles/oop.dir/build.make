@@ -71,19 +71,19 @@ include CMakeFiles/oop.dir/flags.make
 CMakeFiles/oop.dir/codegen:
 .PHONY : CMakeFiles/oop.dir/codegen
 
-CMakeFiles/oop.dir/src/main.cpp.obj: CMakeFiles/oop.dir/flags.make
-CMakeFiles/oop.dir/src/main.cpp.obj: C:/Users/Boy/Desktop/Proiect\ 1\ POO/POO-project/src/main.cpp
-CMakeFiles/oop.dir/src/main.cpp.obj: CMakeFiles/oop.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/oop.dir/src/main.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oop.dir/src/main.cpp.obj -MF CMakeFiles\oop.dir\src\main.cpp.obj.d -o CMakeFiles\oop.dir\src\main.cpp.obj -c "C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\src\main.cpp"
+CMakeFiles/oop.dir/main.cpp.obj: CMakeFiles/oop.dir/flags.make
+CMakeFiles/oop.dir/main.cpp.obj: C:/Users/Boy/Desktop/Proiect\ 1\ POO/POO-project/main.cpp
+CMakeFiles/oop.dir/main.cpp.obj: CMakeFiles/oop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/oop.dir/main.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oop.dir/main.cpp.obj -MF CMakeFiles\oop.dir\main.cpp.obj.d -o CMakeFiles\oop.dir\main.cpp.obj -c "C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\main.cpp"
 
-CMakeFiles/oop.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/oop.dir/src/main.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\src\main.cpp" > CMakeFiles\oop.dir\src\main.cpp.i
+CMakeFiles/oop.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/oop.dir/main.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\main.cpp" > CMakeFiles\oop.dir\main.cpp.i
 
-CMakeFiles/oop.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/oop.dir/src/main.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\src\main.cpp" -o CMakeFiles\oop.dir\src\main.cpp.s
+CMakeFiles/oop.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/oop.dir/main.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Boy\Desktop\Proiect 1 POO\POO-project\main.cpp" -o CMakeFiles\oop.dir\main.cpp.s
 
 CMakeFiles/oop.dir/src/Component.cpp.obj: CMakeFiles/oop.dir/flags.make
 CMakeFiles/oop.dir/src/Component.cpp.obj: C:/Users/Boy/Desktop/Proiect\ 1\ POO/POO-project/src/Component.cpp
@@ -227,7 +227,7 @@ CMakeFiles/oop.dir/src/Menu.cpp.s: cmake_force
 
 # Object files for target oop
 oop_OBJECTS = \
-"CMakeFiles/oop.dir/src/main.cpp.obj" \
+"CMakeFiles/oop.dir/main.cpp.obj" \
 "CMakeFiles/oop.dir/src/Component.cpp.obj" \
 "CMakeFiles/oop.dir/src/Directory.cpp.obj" \
 "CMakeFiles/oop.dir/src/File.cpp.obj" \
@@ -242,7 +242,7 @@ oop_OBJECTS = \
 # External object files for target oop
 oop_EXTERNAL_OBJECTS =
 
-oop.exe: CMakeFiles/oop.dir/src/main.cpp.obj
+oop.exe: CMakeFiles/oop.dir/main.cpp.obj
 oop.exe: CMakeFiles/oop.dir/src/Component.cpp.obj
 oop.exe: CMakeFiles/oop.dir/src/Directory.cpp.obj
 oop.exe: CMakeFiles/oop.dir/src/File.cpp.obj

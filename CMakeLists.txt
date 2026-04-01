@@ -16,7 +16,7 @@ else()
 endif()
 
 # Main executable
-add_executable(${PROJECT_NAME} src/main.cpp src/Component.cpp src/Directory.cpp src/File.cpp src/ImageFile.cpp
+add_executable(${PROJECT_NAME} main.cpp src/Component.cpp src/Directory.cpp src/File.cpp src/ImageFile.cpp
 src/VideoFile.cpp  src/EncryptedFile.cpp src/CompressedFile.cpp src/SecureArchive.cpp
 src/Manager.cpp src/Menu.cpp)
 
