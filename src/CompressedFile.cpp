@@ -194,8 +194,7 @@ void CompressedFile::compress()
         current = current << (8 - bitCount);
         encoded.push_back(current);
     }
-
-    delete[] data;
+    
     fileSize = encoded.size();
     data = new char[fileSize + 1];
     for(size_t i = 0; i < fileSize; ++i)
@@ -215,7 +214,6 @@ void CompressedFile::decompress()
     
     std::string decoded = decodeFromBits(compressedData);
 
-    delete[] data;
     fileSize = decoded.size();
     data = new char[fileSize + 1];
     for(size_t i = 0; i < fileSize; ++i)
@@ -251,7 +249,7 @@ std::string CompressedFile::readContent() const{
 std::string CompressedFile ::readDecompressedContent(){
     if(compressed == false)
         return File::readContent();
-    if(!data || fileSize == 0)
+    if(fileSize == 0)
         return "";
     this->decompress();
     std::string content = File::readContent();

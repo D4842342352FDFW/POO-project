@@ -56,14 +56,14 @@ void EncryptedFile::display(int depth) const{
 
 //afisare continut encrypted file
 std::string EncryptedFile:: readContent() const{
-    if(!data || fileSize == 0)
+    if(fileSize == 0)
         return "";
     return File::readContent();
 }
 
 //afisare continut encrypted file decriptatat
 std::string EncryptedFile:: readDecryptedContent(){
-    if(!data || fileSize == 0)
+    if(fileSize == 0)
         return "";
     this->decrypt();
     std::string content = File::readContent();

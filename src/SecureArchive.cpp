@@ -39,7 +39,7 @@ std::string SecureArchive::readContent() const{
 //afisarea textului initial 
 std::string SecureArchive::readDecryptedAndDecompressedContentContent()
 {
-    if(!data || fileSize == 0)
+    if(fileSize == 0)
         return "";
     this->decrypt();
     this->decompress();

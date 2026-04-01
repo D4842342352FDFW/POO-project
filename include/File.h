@@ -4,12 +4,8 @@
 class File : public Component{
     protected:
     //date text file
-    char* data;
+    std::string data;
     size_t fileSize;
-
-    //functii de clear si copy
-    void freeResource();
-    void copyFrom(const File& other);
 
     public:
 
@@ -17,9 +13,9 @@ class File : public Component{
     File(const std::string& name, const std::string& content);
 
     //regula celor 3
-    virtual ~File();
+    virtual ~File() = default;
     File(const File& other);
-    File& operator=(const File& other);
+    File& operator=(const File& other) = default;
 
     //functia de clone
     Component* clone() const override;
