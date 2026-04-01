@@ -1,7 +1,0 @@
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/oop.dir
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/edit_cache.dir
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/list_install_components.dir
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/install.dir
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/install/local.dir
-C:/Users/Boy/Desktop/Proiect 1 POO/POO-project/build/CMakeFiles/install/strip.dir
