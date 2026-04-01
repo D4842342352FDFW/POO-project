@@ -19,6 +19,8 @@ class Component{
     Component(const std::string& name);
    
     //regula celor 3
+    Component(const Component&) = delete;
+    Component& operator=(const Component&) = delete;
     virtual ~Component();
 
     //functie de copiere componenta
