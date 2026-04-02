@@ -29,7 +29,7 @@ size_t File::getSize() const
 {
     return fileSize;
 }
-//setter nume 
+
 //setter nume
 void File::setName(const std::string& name)
 {
@@ -42,4 +42,3 @@ std::string File::readContent() const{
         return "";
     return data;
 }
-
