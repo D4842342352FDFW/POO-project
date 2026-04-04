@@ -34,7 +34,7 @@ class Directory : public Component{
     //folder, nu fisier
     bool isDirectory() const override { return true; }
     
-    //setter nume 
+    //getter copii
     const std::vector<Component*>& getChildren() const;
 
     //setter nume

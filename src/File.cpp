@@ -21,7 +21,7 @@ void File::display(int depth) const{
         std::cout << " ";
     std::string time = ctime(&timestamp);
     time.pop_back();
-    std::cout<< time << " -> File " << name << " has " << fileSize << " bytes\n";
+    std::cout<< time << " ->    File " << name << " has " << fileSize << " bytes\n";
 }
 
 //getter de dimensiune fisier

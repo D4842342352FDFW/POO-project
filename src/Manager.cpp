@@ -69,7 +69,7 @@ void Manager::removeFromIndex(Component* component)
         }
         else
         {
-            ++it;
+            ++it;   
         }
     }
 }

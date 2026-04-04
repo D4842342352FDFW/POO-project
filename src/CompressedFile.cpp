@@ -195,14 +195,9 @@ void CompressedFile::compress()
         encoded.push_back(current);
     }
     
-    fileSize = encoded.size();
-    data = new char[fileSize + 1];
-    for(size_t i = 0; i < fileSize; ++i)
-    {
-        data[i] = encoded[i];
-    }
-    data[fileSize] = '\0';
     compressedData = std::move(encoded);
+    data.assign(compressedData.begin(), compressedData.end());
+    fileSize = data.length();
     compressed = true;
 }
 
@@ -213,15 +208,8 @@ void CompressedFile::decompress()
         return;
     
     std::string decoded = decodeFromBits(compressedData);
-
-    fileSize = decoded.size();
-    data = new char[fileSize + 1];
-    for(size_t i = 0; i < fileSize; ++i)
-    {
-        data[i] = decoded[i];
-    }
-    data[fileSize] = '\0';
-
+    data = decoded;
+    fileSize = data.length();
     compressed = false;
 }
 
