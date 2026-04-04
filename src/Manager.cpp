@@ -265,8 +265,15 @@ std::string Manager::readFile(const std::string& name) const{
     Component* component = findByName(name);
     if(!component->isDirectory())
     {
-        File *file = static_cast<File*>(component);
-        return file->readContent();
+        File *file = dynamic_cast<File*>(component);
+        if (file) 
+        {
+            return file->readContent();
+        } 
+        else 
+        {
+            throw Exception("Cannot read content of binary files (images/videos)");
+        }
     }
     else
     {
