@@ -142,16 +142,40 @@ void Menu::handleCreateFile() {
         std::cout << "Type (1: Raw, 2: Image, 3: Video, 4: Encrypted, 5: Compressed, 6: SecureArchive): ";
         std::cin >> type;
         
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            throw Exception("Invalid type input");
+        }
+        
         if(type == 2)
         {
             int width, height, bpp;
             std::string format;
             std::cout << "Width: "; 
             std::cin >> width;
+            if (std::cin.fail()) 
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                throw Exception("Invalid width input");
+            }
             std::cout << "Height: "; 
             std::cin >> height;
+            if (std::cin.fail()) 
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                throw Exception("Invalid height input");
+            }
             std::cout << "Bits per pixel: "; 
             std::cin >> bpp;
+            if (std::cin.fail()) 
+            {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+                throw Exception("Invalid bpp input");
+            }
             std::cout << "Format: "; 
             std::cin >> format;
             Manager::getInstance()->createFile(name, "", type, width, height, bpp, 0, 0.0, format);
@@ -165,14 +189,44 @@ void Menu::handleCreateFile() {
                 std::string format;
                 std::cout << "Width: "; 
                 std::cin >> width;
+                if (std::cin.fail()) 
+                {
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    throw Exception("Invalid width input");
+                }
                 std::cout << "Height: "; 
                 std::cin >> height;
+                if (std::cin.fail()) 
+                {
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    throw Exception("Invalid height input");
+                }
                 std::cout << "Bits per pixel: "; 
                 std::cin >> bpp;
+                if (std::cin.fail()) 
+                {
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    throw Exception("Invalid bpp input");
+                }
                 std::cout << "FPS: "; 
                 std::cin >> fps;
+                if (std::cin.fail()) 
+                {
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    throw Exception("Invalid fps input");
+                }
                 std::cout << "Duration: "; 
                 std::cin >> duration;
+                if (std::cin.fail()) 
+                {
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n');
+                    throw Exception("Invalid duration input");
+                }
                 std::cout << "Format: "; 
                 std::cin >> format;
                 Manager::getInstance()->createFile(name, "", type, width, height, bpp, fps, duration, format);
