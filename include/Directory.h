@@ -27,6 +27,8 @@ class Directory : public Component{
 
     //afisare date director
     void display(int depth) const override;
+    std::string getTypeName() const override;
+    std::vector<std::string> getMetadataLines() const override;
 
     //getter size + copii 
     size_t getSize() const override;

@@ -54,6 +54,16 @@ void EncryptedFile::display(int depth) const{
     std::cout<< time << " -> Encrypted File " << name << " has " << fileSize << " bytes\n";
 }
 
+std::string EncryptedFile::getTypeName() const
+{
+    return "Encrypted File";
+}
+
+std::vector<std::string> EncryptedFile::getMetadataLines() const
+{
+    return {"content: encrypted text", "cipher: xor+rotate"};
+}
+
 //afisare continut encrypted file
 std::string EncryptedFile:: readContent() const{
     if(fileSize == 0)
@@ -69,4 +79,27 @@ std::string EncryptedFile:: readDecryptedContent(){
     std::string content = File::readContent();
     this->encrypt();
     return content;
+}
+
+std::string EncryptedFile::getReadableContent() const
+{
+    return const_cast<EncryptedFile*>(this)->readDecryptedContent();
+}
+
+std::string EncryptedFile::getDisplayContent() const
+{
+    return readContent();
+}
+
+void EncryptedFile::setReadableContent(const std::string& content)
+{
+    data = content;
+    fileSize = data.length();
+    encrypt();
+}
+
+//persistenta foloseste continutul decriptat
+std::string EncryptedFile::getPersistentContent()
+{
+    return readDecryptedContent();
 }

@@ -48,6 +48,22 @@ void VideoFile::display(int depth) const{
     << " ( " << duration << " s , " << fps << "FPS ) " << videoSize << " bytes\n";
 }
 
+std::string VideoFile::getTypeName() const
+{
+    return "Video File";
+}
+
+std::vector<std::string> VideoFile::getMetadataLines() const
+{
+    return {
+        "resolution: " + std::to_string(width) + "x" + std::to_string(height),
+        "bpp: " + std::to_string(bpp),
+        "fps: " + std::to_string(fps),
+        "duration: " + std::to_string(duration) + "s",
+        "format: " + format
+    };
+}
+
 //getter de dimensiune imagine
 size_t VideoFile::getSize() const
 {
@@ -58,6 +74,12 @@ size_t VideoFile::getSize() const
 void VideoFile::setName(const std::string& name)
 {
     this->name = name;
+}
+
+//fisier video gol
+std::string VideoFile::getPersistentContent()
+{
+    return "";
 }
 
 

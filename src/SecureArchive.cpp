@@ -24,6 +24,18 @@ void SecureArchive::display(int depth) const
     std::cout<< time << " -> Secure Archive: Enc + Comp " << name << " has " << fileSize << " bytes\n";
 }
 
+std::string SecureArchive::getTypeName() const
+{
+    return "Secure Archive";
+}
+
+std::vector<std::string> SecureArchive::getMetadataLines() const
+{
+    std::vector<std::string> lines = CompressedFile::getMetadataLines();
+    lines.insert(lines.begin(), "content: encrypted + compressed");
+    return lines;
+}
+
 //getter dimensiunea mostenita de la compresare
 size_t SecureArchive::getSize() const{
     return CompressedFile::getSize();
@@ -32,6 +44,12 @@ size_t SecureArchive::getSize() const{
 //partea de citire continut fisier
 std::string SecureArchive::readContent() const{
     return File::readContent();
+}
+
+//persistenta foloseste continutul decriptat si decomprimat
+std::string SecureArchive::getPersistentContent()
+{
+    return readDecryptedAndDecompressedContentContent();
 }
 
 
@@ -48,4 +66,24 @@ std::string SecureArchive::readDecryptedAndDecompressedContentContent()
     this->encrypt();
 
     return content;
+}
+
+std::string SecureArchive::getReadableContent() const
+{
+    return const_cast<SecureArchive*>(this)->readDecryptedAndDecompressedContentContent();
+}
+
+std::string SecureArchive::getDisplayContent() const
+{
+    return readContent();
+}
+
+void SecureArchive::setReadableContent(const std::string& content)
+{
+    decrypt();
+    decompress();
+    data = content;
+    fileSize = data.length();
+    compress();
+    encrypt();
 }

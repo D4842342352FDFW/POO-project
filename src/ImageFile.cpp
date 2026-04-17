@@ -45,6 +45,20 @@ void ImageFile::display(int depth) const{
     std::cout<< time << " -> Image  " << name << " [ " << width << "x" << height << " " << format << " ] has " << imageSize << " bytes\n";
 }
 
+std::string ImageFile::getTypeName() const
+{
+    return "Image File";
+}
+
+std::vector<std::string> ImageFile::getMetadataLines() const
+{
+    return {
+        "resolution: " + std::to_string(width) + "x" + std::to_string(height),
+        "bpp: " + std::to_string(bpp),
+        "format: " + format
+    };
+}
+
 //getter de dimensiune imagine
 size_t ImageFile::getSize() const
 {
@@ -55,6 +69,12 @@ size_t ImageFile::getSize() const
 void ImageFile::setName(const std::string& name)
 {
     this->name = name;
+}
+
+//continut persistent - fisier gol
+std::string ImageFile::getPersistentContent()
+{
+    return "";
 }
 
 

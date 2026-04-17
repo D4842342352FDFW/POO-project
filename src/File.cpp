@@ -42,3 +42,40 @@ std::string File::readContent() const{
         return "";
     return data;
 }
+
+//continutul de baza pentru persistenta
+std::string File::getPersistentContent()
+{
+    return readContent();
+}
+
+std::string File::getTypeName() const
+{
+    return "Raw File";
+}
+
+std::vector<std::string> File::getMetadataLines() const
+{
+    return {"content: plain text"};
+}
+
+bool File::supportsReadableContent() const
+{
+    return true;
+}
+
+std::string File::getReadableContent() const
+{
+    return readContent();
+}
+
+std::string File::getDisplayContent() const
+{
+    return readContent();
+}
+
+void File::setReadableContent(const std::string& content)
+{
+    data = content;
+    fileSize = data.length();
+}

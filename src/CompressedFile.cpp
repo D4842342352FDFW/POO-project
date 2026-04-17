@@ -223,6 +223,20 @@ void CompressedFile::display(int depth) const{
     std::cout<< time << " -> Compressed File " << name << " has " << fileSize << " bytes\n";
 }
 
+std::string CompressedFile::getTypeName() const
+{
+    return "Compressed File";
+}
+
+std::vector<std::string> CompressedFile::getMetadataLines() const
+{
+    std::vector<std::string> lines;
+    lines.push_back(std::string("state: ") + (compressed ? "compressed" : "decompressed"));
+    lines.push_back("original_size: " + std::to_string(originalSize));
+    lines.push_back("stored_size: " + std::to_string(fileSize));
+    return lines;
+}
+
 //getter de dimensiune 
 size_t CompressedFile::getSize() const{
     return compressed ? compressedData.size() : fileSize;
@@ -243,4 +257,37 @@ std::string CompressedFile ::readDecompressedContent(){
     std::string content = File::readContent();
     this->compress();
     return content;
+}
+
+std::string CompressedFile::getReadableContent() const
+{
+    return const_cast<CompressedFile*>(this)->readDecompressedContent();
+}
+
+std::string CompressedFile::getDisplayContent() const
+{
+    return readContent();
+}
+
+void CompressedFile::setReadableContent(const std::string& content)
+{
+    if(compressed)
+    {
+        decompress();
+    }
+
+    data = content;
+    fileSize = data.length();
+    compressedData.clear();
+    codeTable.clear();
+    root.reset();
+    compressed = false;
+    originalSize = 0;
+    compress();
+}
+
+//persistenta foloseste continutul decomprimat
+std::string CompressedFile::getPersistentContent()
+{
+    return readDecompressedContent();
 }

@@ -6,7 +6,7 @@ void Directory::clear()
 {
     for(auto child : children)
     {
-        delete child;
+        delete child;   
     }
     children.clear();
 }
@@ -65,6 +65,16 @@ void Directory::display(int depth) const
     {
         child->display(depth+1);
     }
+}
+// getter tip de componenta
+std::string Directory::getTypeName() const
+{
+    return "Directory";
+}
+//getter metadate director
+std::vector<std::string> Directory::getMetadataLines() const
+{
+    return {"children: " + std::to_string(children.size())};
 }
 
 //getter calcul dimensiune totala director

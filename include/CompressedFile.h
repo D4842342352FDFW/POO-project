@@ -50,11 +50,19 @@ class CompressedFile : virtual public File{
 
     //functia de afisare date
     void display(int depth) const override;
+    std::string getTypeName() const override;
+    std::vector<std::string> getMetadataLines() const override;
 
     //getter de dimensiune
     size_t getSize() const override;
 
     //functiile de afisare continut compresat / decompresat
     std::string readContent() const override;
+    std::string getDisplayContent() const override;
+    std::string getReadableContent() const override;
+    void setReadableContent(const std::string& content) override;
     std::string readDecompressedContent();
+
+    //continutul folosit la persistenta
+    std::string getPersistentContent() override;
 };

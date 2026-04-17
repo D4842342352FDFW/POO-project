@@ -22,6 +22,8 @@ class File : public Component{
 
     //functia afisare date
     void display(int depth) const override;
+    std::string getTypeName() const override;
+    std::vector<std::string> getMetadataLines() const override;
 
     //getter de dimensiune
     size_t getSize() const override;
@@ -33,4 +35,11 @@ class File : public Component{
 
     //functii de citire continut fisiere
     virtual std::string readContent() const;
+    bool supportsReadableContent() const override;
+    std::string getDisplayContent() const override;
+    std::string getReadableContent() const override;
+    void setReadableContent(const std::string& content) override;
+
+    //continut logic pentru persistenta
+    std::string getPersistentContent() override;
 };

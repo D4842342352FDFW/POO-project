@@ -33,9 +33,18 @@ class EncryptedFile : virtual public File{
 
     //afisare date fisier
     void display(int depth) const override;
+    std::string getTypeName() const override;
+    std::vector<std::string> getMetadataLines() const override;
     
     //afisare continut fisier criptat
     std::string readContent() const override;
+    std::string getDisplayContent() const override;
+    std::string getReadableContent() const override;
+    void setReadableContent(const std::string& content) override;
+    
     //afisare continut fisier decriptat
     std::string readDecryptedContent();
+
+    //continutul folosit la persistenta
+    std::string getPersistentContent() override;
 };

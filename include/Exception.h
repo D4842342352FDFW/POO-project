@@ -15,7 +15,7 @@ class Exception : public std::exception {
     const char* what() const noexcept override {
         return message.c_str();
     }
-};
+};  
 
 class NotFoundException : public Exception {
     
