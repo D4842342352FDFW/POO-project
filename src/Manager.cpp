@@ -6,6 +6,7 @@
 #include "../include/EncryptedFile.h"
 #include "../include/CompressedFile.h"
 #include "../include/SecureArchive.h"
+#include "../include/FileFactory.h"
 #include "../include/Exception.h"
 #include <iostream>
 #include <fstream>
@@ -50,13 +51,6 @@ void writeDiskFile(const std::string& path, const std::string& content)
     }
 
     out.write(content.data(), static_cast<std::streamsize>(content.size()));
-}
-
-//template pentru creare de fisiere
-template<typename T, typename... Args>
-Component* createTypedFile(Args&&... args)
-{
-    return new T(std::forward<Args>(args)...);
 }
 
 std::string toLower(const std::string& value)
@@ -118,20 +112,21 @@ std::string normalizeFileNameWithExtension(const std::string& name, int type, [[
 }
 
 //initializare instanta statica
-Manager* Manager::instance = nullptr;
+std::shared_ptr<Manager> Manager::instance = nullptr;
 
 //getter instanta
-Manager* Manager::getInstance()
+std::shared_ptr<Manager> Manager::getInstance()
 {
     if(!instance)
-        instance = new Manager();
+    {
+        instance = std::shared_ptr<Manager>(new Manager());
+    }
     return instance;
 }
 
 void Manager::destroyInstance()
 {
-    delete instance;
-    instance = nullptr;
+    instance.reset();
 }
 
 //constructor
@@ -140,22 +135,17 @@ Manager::Manager()
     storageRoot = "root";
     ensureStorageRoot();
 
-    root = new Directory("root");
+    root = std::make_shared<Directory>("root");
     currentDirectory = root;
     globalIndex.emplace("root", root);
+    fileFactory = std::make_shared<ConcreteFileFactory>();
 
     //la pornire incercam sa incarcam direct din arborele real de pe disc
     loadFromDiskTree();
 }
 
-//destructor
-Manager::~Manager()
-{
-    delete root;
-}
-
 //eliminare din indexul global
-void Manager::removeFromIndex(Component* component)
+void Manager::removeFromIndex(const std::shared_ptr<Component>& component)
 {
     if(component == nullptr)
     {
@@ -165,8 +155,8 @@ void Manager::removeFromIndex(Component* component)
     //daca e folder eliminam recursiv toti copii
     if(component->isDirectory())
     {
-        Directory* directory = static_cast<Directory*>(component);
-        for(auto child : directory->getChildren())
+        auto directory = std::dynamic_pointer_cast<Directory>(component);
+        for(const auto& child : directory->getChildren())
         {
             removeFromIndex(child);
         }
@@ -188,7 +178,7 @@ void Manager::removeFromIndex(Component* component)
 }
 
 //luam recursiv calea completa
-std::string Manager::getComponentPath(Component* component) const
+std::string Manager::getComponentPath(const std::shared_ptr<Component>& component) const
 {
     if(component == nullptr)
     {
@@ -196,7 +186,7 @@ std::string Manager::getComponentPath(Component* component) const
     }
 
     std::string path = component->getName();
-    Directory* parent = component->getParent();
+    auto parent = component->getParent();
 
     while(parent)
     {
@@ -209,9 +199,9 @@ std::string Manager::getComponentPath(Component* component) const
 
 //cautam componenta dupa nume initial in folderul curent
 //si dupa global prin toata structura
-Component* Manager::findByName(const std::string& name) const
+std::shared_ptr<Component> Manager::findByName(const std::string& name) const
 {
-    Component* fromCurrentDirectory = currentDirectory->findComponent(name);
+    auto fromCurrentDirectory = currentDirectory->findComponent(name);
     if(fromCurrentDirectory)
     {
         return fromCurrentDirectory;
@@ -241,7 +231,7 @@ void Manager::ensureStorageRoot()
 }
 
 //refacere index global dupa incarcare
-void Manager::rebuildIndex(Component* component)
+void Manager::rebuildIndex(const std::shared_ptr<Component>& component)
 {
     if(component == nullptr)
     {
@@ -251,8 +241,8 @@ void Manager::rebuildIndex(Component* component)
     globalIndex.emplace(component->getName(), component);
     if(component->isDirectory())
     {
-        Directory* directory = static_cast<Directory*>(component);
-        for(auto child : directory->getChildren())
+        auto directory = std::dynamic_pointer_cast<Directory>(component);
+        for(const auto& child : directory->getChildren())
         {
             rebuildIndex(child);
         }
@@ -267,18 +257,17 @@ void Manager::loadFromDiskTree()
         return;
     }
 
-    delete root;
-    root = new Directory("root");
+    root = std::make_shared<Directory>("root");
 
-    std::function<void(Directory*, const std::filesystem::path&)> loadRecursive;
-    loadRecursive = [&](Directory* parent, const std::filesystem::path& currentPath)
+    std::function<void(const std::shared_ptr<Directory>&, const std::filesystem::path&)> loadRecursive;
+    loadRecursive = [&](const std::shared_ptr<Directory>& parent, const std::filesystem::path& currentPath)
     {
         for(const auto& entry : std::filesystem::directory_iterator(currentPath))
         {
             const std::string nodeName = entry.path().filename().string();
             if(entry.is_directory())
             {
-                Directory* childDirectory = new Directory(nodeName);
+                auto childDirectory = std::make_shared<Directory>(nodeName);
                 parent->addComponent(childDirectory);
                 loadRecursive(childDirectory, entry.path());
             }
@@ -287,7 +276,7 @@ void Manager::loadFromDiskTree()
                 if(entry.is_regular_file())
                 {
                     std::string content = readDiskFile(entry.path().string());
-                    File* childFile = new File(nodeName, content);
+                    auto childFile = std::make_shared<File>(nodeName, content);
                     childFile->setStoragePath(entry.path().string());
                     parent->addComponent(childFile);
                 }
@@ -302,7 +291,7 @@ void Manager::loadFromDiskTree()
 }
 
 //extrage continutul pentru fiecare tip de fisier
-std::string Manager::getLogicalDataForDisk(Component* component) const
+std::string Manager::getLogicalDataForDisk(const std::shared_ptr<Component>& component) const
 {
     if(component == nullptr)
     {
@@ -313,7 +302,7 @@ std::string Manager::getLogicalDataForDisk(Component* component) const
 }
 
 //stergere recursiva a fisierelor fizice asociate componentelor
-void Manager::deletePhysicalData(Component* component)
+void Manager::deletePhysicalData(const std::shared_ptr<Component>& component)
 {
     if(component == nullptr)
     {
@@ -322,8 +311,8 @@ void Manager::deletePhysicalData(Component* component)
 
     if(component->isDirectory())
     {
-        Directory* directory = static_cast<Directory*>(component);
-        for(auto child : directory->getChildren())
+        auto directory = std::dynamic_pointer_cast<Directory>(component);
+        for(const auto& child : directory->getChildren())
         {
             deletePhysicalData(child);
         }
@@ -365,7 +354,7 @@ std::string Manager::sanitizeDiskName(const std::string& name) const
 }
 
 //materializare recursiva a structurii VFS in foldere/fisiere reale
-void Manager::materializeNodeOnDisk(Component* component, const std::filesystem::path& parentPath) const
+void Manager::materializeNodeOnDisk(const std::shared_ptr<Component>& component, const std::filesystem::path& parentPath) const
 {
     if(component == nullptr)
     {
@@ -377,8 +366,8 @@ void Manager::materializeNodeOnDisk(Component* component, const std::filesystem:
     if(component->isDirectory())
     {
         std::filesystem::create_directories(nodePath);
-        Directory* asDirectory = static_cast<Directory*>(component);
-        for(auto child : asDirectory->getChildren())
+        auto asDirectory = std::dynamic_pointer_cast<Directory>(component);
+        for(const auto& child : asDirectory->getChildren())
         {
             materializeNodeOnDisk(child, nodePath);
         }
@@ -400,7 +389,7 @@ void Manager::materializeTreeOnDisk() const
     std::filesystem::create_directories(storageRoot);
 
     //storageRoot reprezinta deja directorul radacina logic, deci materializam doar copiii
-    for(auto child : root->getChildren())
+    for(const auto& child : root->getChildren())
     {
         materializeNodeOnDisk(child, storageRoot);
     }
@@ -414,7 +403,7 @@ void Manager::createDirectory(const std::string& name)
         throw Exception("Element already exists in current directory");
     }
 
-    auto newDir = new Directory(name);
+    auto newDir = fileFactory->createDirectory(name);
     currentDirectory->addComponent(newDir);
     globalIndex.emplace(name, newDir);
 
@@ -427,7 +416,7 @@ void Manager::createFile(const std::string& name, const std::string& content, in
 int width, int height, int bpp, int fps, double duration,
 const std::string& format)
 {
-    Component* newFile = nullptr;
+    std::shared_ptr<Component> newFile;
     const std::string normalizedName = normalizeFileNameWithExtension(name, type, format);
 
     if(currentDirectory->findComponent(normalizedName))
@@ -436,17 +425,17 @@ const std::string& format)
     }
 
     if(type == 1)
-        newFile = createTypedFile<File>(normalizedName, content);
+        newFile = fileFactory->createTextFile(normalizedName, content);
     if(type == 2)
-        newFile = createTypedFile<ImageFile>(normalizedName, width, height, bpp, "bmp");
+        newFile = fileFactory->createImageFile(normalizedName, width, height, bpp);
     if(type == 3)
-        newFile = createTypedFile<VideoFile>(normalizedName, width, height, bpp, fps, duration, "gif");
+        newFile = fileFactory->createVideoFile(normalizedName, width, height, bpp, fps, duration);
     if(type == 4)
-        newFile = createTypedFile<EncryptedFile>(normalizedName, content);
+        newFile = fileFactory->createEncryptedFile(normalizedName, content);
     if(type == 5)
-        newFile = createTypedFile<CompressedFile>(normalizedName, content);
+        newFile = fileFactory->createCompressedFile(normalizedName, content);
     if(type == 6)
-        newFile = createTypedFile<SecureArchive>(normalizedName, content);
+        newFile = fileFactory->createSecureArchive(normalizedName, content);
 
     if(newFile == nullptr)
     {
@@ -469,7 +458,7 @@ std::string Manager::convertFileType(const std::string& name, int targetType)
         throw Exception("Invalid conversion target type");
     }
 
-    Component* component = currentDirectory->findComponent(name);
+    auto component = currentDirectory->findComponent(name);
     if(component == nullptr)
     {
         throw NotFoundException(name);
@@ -480,37 +469,37 @@ std::string Manager::convertFileType(const std::string& name, int targetType)
         throw Exception("Cannot convert a directory");
     }
 
-    if(dynamic_cast<ImageFile*>(component) || dynamic_cast<VideoFile*>(component))
+    if(std::dynamic_pointer_cast<ImageFile>(component) || std::dynamic_pointer_cast<VideoFile>(component))
     {
         throw Exception("Conversion is available only for text-based files");
     }
 
-    Directory* parent = component->getParent();
+    auto parent = component->getParent();
     if(parent == nullptr)
     {
         throw Exception("Invalid file parent");
     }
 
     std::string plainContent;
-    if(SecureArchive* secureArchive = dynamic_cast<SecureArchive*>(component))
+    if(auto secureArchive = std::dynamic_pointer_cast<SecureArchive>(component))
     {
         plainContent = secureArchive->readDecryptedAndDecompressedContentContent();
     }
     else
     {
-        if(EncryptedFile* encryptedFile = dynamic_cast<EncryptedFile*>(component))
+        if(auto encryptedFile = std::dynamic_pointer_cast<EncryptedFile>(component))
         {
             plainContent = encryptedFile->readDecryptedContent();
         }
         else
         {
-            if(CompressedFile* compressedFile = dynamic_cast<CompressedFile*>(component))
+            if(auto compressedFile = std::dynamic_pointer_cast<CompressedFile>(component))
             {
                 plainContent = compressedFile->readDecompressedContent();
             }
             else
             {
-                File* normalFile = dynamic_cast<File*>(component);
+                auto normalFile = std::dynamic_pointer_cast<File>(component);
                 if(normalFile == nullptr)
                 {
                     throw Exception("Unsupported file type for conversion");
@@ -528,28 +517,28 @@ std::string Manager::convertFileType(const std::string& name, int targetType)
     }
 
     const std::string newName = normalizeFileNameWithExtension(baseName, targetType, "");
-    Component* existingWithNewName = parent->findComponent(newName);
+    auto existingWithNewName = parent->findComponent(newName);
     if(existingWithNewName && existingWithNewName != component)
     {
         throw Exception("Element already exists in current directory");
     }
 
-    Component* convertedFile = nullptr;
+    std::shared_ptr<Component> convertedFile;
     if(targetType == 1)
     {
-        convertedFile = createTypedFile<File>(newName, plainContent);
+        convertedFile = fileFactory->createTextFile(newName, plainContent);
     }
     if(targetType == 4)
     {
-        convertedFile = createTypedFile<EncryptedFile>(newName, plainContent);
+        convertedFile = fileFactory->createEncryptedFile(newName, plainContent);
     }
     if(targetType == 5)
     {
-        convertedFile = createTypedFile<CompressedFile>(newName, plainContent);
+        convertedFile = fileFactory->createCompressedFile(newName, plainContent);
     }
     if(targetType == 6)
     {
-        convertedFile = createTypedFile<SecureArchive>(newName, plainContent);
+        convertedFile = fileFactory->createSecureArchive(newName, plainContent);
     }
 
     if(convertedFile == nullptr)
@@ -571,19 +560,21 @@ std::string Manager::convertFileType(const std::string& name, int targetType)
 //stergere componenta din directorul curent si din index
 void Manager::deleteComponent(const std::string& name)
 {
-    Component* comp = currentDirectory->findComponent(name);
+    auto comp = currentDirectory->findComponent(name);
     if(comp)
     {
         if(comp == root)
         {
             throw Exception("Cannot delete root directory");
         }
-        if(comp->getParent())
+
+        auto parent = comp->getParent();
+        if(parent)
         {
             //stergere date fizice inainte de eliberarea memoriei
             deletePhysicalData(comp);
             removeFromIndex(comp);
-            comp->getParent()->removeComponent(name);
+            parent->removeComponent(name);
 
             //actualizare imediata a arborelui fizic de pe disc
             materializeTreeOnDisk();
@@ -611,8 +602,8 @@ std::vector<std::string> Manager::getTreeLines() const
         return lines;
     }
 
-    std::function<void(Component*, int)> collect;
-    collect = [&](Component* node, int depth)
+    std::function<void(const std::shared_ptr<Component>&, int)> collect;
+    collect = [&](const std::shared_ptr<Component>& node, int depth)
     {
         if(node == nullptr)
         {
@@ -625,8 +616,8 @@ std::vector<std::string> Manager::getTreeLines() const
 
         if(node->isDirectory())
         {
-            Directory* directory = static_cast<Directory*>(node);
-            for(auto child : directory->getChildren())
+            auto directory = std::dynamic_pointer_cast<Directory>(node);
+            for(const auto& child : directory->getChildren())
             {
                 collect(child, depth + 1);
             }
@@ -639,8 +630,8 @@ std::vector<std::string> Manager::getTreeLines() const
 
 std::vector<std::string> Manager::getCurrentDirectoryListing(const std::string& sortBy, bool ascending, const std::string& typeFilter) const
 {
-    std::vector<Component*> items;
-    for(auto child : currentDirectory->getChildren())
+    std::vector<std::shared_ptr<Component>> items;
+    for(const auto& child : currentDirectory->getChildren())
     {
         if(child == nullptr)
         {
@@ -675,7 +666,7 @@ std::vector<std::string> Manager::getCurrentDirectoryListing(const std::string& 
     }
 
     const std::string normalizedSort = toLower(sortBy);
-    std::sort(items.begin(), items.end(), [&](Component* a, Component* b)
+    std::sort(items.begin(), items.end(), [&](const std::shared_ptr<Component>& a, const std::shared_ptr<Component>& b)
     {
         if(normalizedSort == "size")
         {
@@ -714,7 +705,7 @@ std::vector<std::string> Manager::getCurrentDirectoryListing(const std::string& 
 
 std::string Manager::getComponentDetails(const std::string& name) const
 {
-    Component* component = findByName(name);
+    auto component = findByName(name);
     if(component == nullptr)
     {
         throw NotFoundException(name);
@@ -748,7 +739,7 @@ std::string Manager::getCurrentDirectoryStats() const
     size_t totalSize = 0;
 
     std::unordered_map<std::string, size_t> typeCounts;
-    for(auto child : currentDirectory->getChildren())
+    for(const auto& child : currentDirectory->getChildren())
     {
         if(child == nullptr)
         {
@@ -810,7 +801,7 @@ void Manager::search(const std::string& name) const{
 //intoarce calea absoluta pe disc pentru componenta cautata
 std::string Manager::getAbsoluteDiskPath(const std::string& name) const
 {
-    Component* component = findByName(name);
+    auto component = findByName(name);
     if(component == nullptr)
     {
         throw NotFoundException(name);
@@ -848,7 +839,7 @@ void Manager::resetToRoot()
 }
 
 //setter director curent (folosit de GUI)
-void Manager::setCurrentDirectory(Directory* directory)
+void Manager::setCurrentDirectory(const std::shared_ptr<Directory>& directory)
 {
     if(directory == nullptr)
     {
@@ -860,13 +851,13 @@ void Manager::setCurrentDirectory(Directory* directory)
 }
 
 //getter radacina pentru tree view in GUI
-Directory* Manager::getRoot() const
+std::shared_ptr<Directory> Manager::getRoot() const
 {
     return root;
 }
 
 //getter director curent pentru contextul de creare
-Directory* Manager::getCurrentDirectory() const
+std::shared_ptr<Directory> Manager::getCurrentDirectory() const
 {
     return currentDirectory;
 }
@@ -887,10 +878,10 @@ void Manager::changeDirectory(const std::string &name)
         return;
     }
 
-    Component* comp = currentDirectory->findComponent(name);
+    auto comp = currentDirectory->findComponent(name);
     if(comp && comp->isDirectory())
     {
-        currentDirectory = static_cast<Directory*>(comp);
+        currentDirectory = std::dynamic_pointer_cast<Directory>(comp);
     }
     else
     {
@@ -901,7 +892,7 @@ void Manager::changeDirectory(const std::string &name)
 //calea directorului curent
 std::string Manager::getCurrentPath() const{
     std::string path = currentDirectory->getName();
-    Directory* current = currentDirectory->getParent();
+    auto current = currentDirectory->getParent();
 
     while(current)
     {
@@ -914,7 +905,7 @@ std::string Manager::getCurrentPath() const{
 
 //functie citire continut fisier
 std::string Manager::readFile(const std::string& name) const{
-    Component* component = findByName(name);
+    auto component = findByName(name);
     if(component->isDirectory())
     {
         throw NotFoundException(name);
@@ -930,7 +921,7 @@ std::string Manager::readFile(const std::string& name) const{
 
 void Manager::updateFileContent(const std::string& name, const std::string& content)
 {
-    Component* component = findByName(name);
+    auto component = findByName(name);
     if(component->isDirectory())
     {
         throw Exception("Cannot edit directory content");
@@ -947,7 +938,7 @@ void Manager::updateFileContent(const std::string& name, const std::string& cont
 }
 
 //getter componenta
-Component* Manager::getComponent(const std::string& name) const
+std::shared_ptr<Component> Manager::getComponent(const std::string& name) const
 {
     return findByName(name);
 }

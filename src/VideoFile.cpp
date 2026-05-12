@@ -33,9 +33,9 @@ VideoFile& VideoFile::operator=(const VideoFile& other)
 }
 
 //functia de clone
-Component* VideoFile::clone() const
+std::shared_ptr<Component> VideoFile::clone() const
 {
-    return new VideoFile(*this);
+    return std::make_shared<VideoFile>(*this);
 }
 
 //functia de afisare date imagine

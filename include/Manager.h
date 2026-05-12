@@ -4,36 +4,39 @@
 #include <string>
 #include <filesystem>
 #include <vector>
+#include <memory>
 
 class Component;
 class Directory;
+class FileFactory;
 
 class Manager{
 
     //pointeri pentru radacina si folderul curent
-    Directory* root;
-    Directory* currentDirectory;
+    std::shared_ptr<Directory> root;
+    std::shared_ptr<Directory> currentDirectory;
 
     //index global => cautare rapida
-    std::unordered_multimap<std::string, Component*> globalIndex;
+    std::unordered_multimap<std::string, std::shared_ptr<Component>> globalIndex;
     std::filesystem::path storageRoot;
+    std::shared_ptr<FileFactory> fileFactory;
 
     //functii de ajutor
-    void removeFromIndex(Component* component);
-    std::string getComponentPath(Component* component) const;
-    Component* findByName(const std::string& name) const;
-    void rebuildIndex(Component* component);
+    void removeFromIndex(const std::shared_ptr<Component>& component);
+    std::string getComponentPath(const std::shared_ptr<Component>& component) const;
+    std::shared_ptr<Component> findByName(const std::string& name) const;
+    void rebuildIndex(const std::shared_ptr<Component>& component);
     void ensureStorageRoot();
     void loadFromDiskTree();
-    std::string getLogicalDataForDisk(Component* component) const;
-    void deletePhysicalData(Component* component);
+    std::string getLogicalDataForDisk(const std::shared_ptr<Component>& component) const;
+    void deletePhysicalData(const std::shared_ptr<Component>& component);
     std::string sanitizeDiskName(const std::string& name) const;
     void materializeTreeOnDisk() const;
-    void materializeNodeOnDisk(Component* component, const std::filesystem::path& parentPath) const;
+    void materializeNodeOnDisk(const std::shared_ptr<Component>& component, const std::filesystem::path& parentPath) const;
     
     //constructor privat
     Manager();
-    static Manager* instance;
+    static std::shared_ptr<Manager> instance;
 
     public:
 
@@ -42,10 +45,10 @@ class Manager{
     Manager& operator=(const Manager&) = delete;
 
     //destructor
-    ~Manager();
+    ~Manager() = default;
     
     //metode statice pentru gestionarea singletonului
-    static Manager* getInstance();
+    static std::shared_ptr<Manager> getInstance();
     static void destroyInstance();
     
     //functii de manipulare 
@@ -54,7 +57,7 @@ class Manager{
     int width = 0, int height = 0, int bpp = 0, int fps = 0, double duration = 0.0, const std::string& format = "");
     std::string convertFileType(const std::string& name, int targetType);
     void deleteComponent(const std::string& name);
-    Component* getComponent(const std::string& name) const;
+    std::shared_ptr<Component> getComponent(const std::string& name) const;
 
     //functia de citire continut fisier
     std::string readFile(const std::string& name) const;
@@ -77,9 +80,9 @@ class Manager{
     //functii pentru starea curenta
     std::string getCurrentPath() const;
     void resetToRoot();
-    void setCurrentDirectory(Directory* directory);
+    void setCurrentDirectory(const std::shared_ptr<Directory>& directory);
 
     //gettere utile pentru interfata grafica
-    Directory* getRoot() const;
-    Directory* getCurrentDirectory() const;
+    std::shared_ptr<Directory> getRoot() const;
+    std::shared_ptr<Directory> getCurrentDirectory() const;
 };

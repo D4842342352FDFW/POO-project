@@ -8,7 +8,7 @@ int Component::instanceCount = 0;
 //constructor componenta  
 Component::Component(const std::string& name) : name(name), size(0), timestamp(time(nullptr)) 
 {
-    parent = nullptr;
+    parent.reset();
     instanceCount++;
 }
 
@@ -31,8 +31,8 @@ int Component::getInstanceCount()
 std::string Component::getName() const{
     return name;
 }
-Directory* Component::getParent() const{
-    return parent;
+std::shared_ptr<Directory> Component::getParent() const{
+    return parent.lock();
 }
 time_t Component::getTimestamp() const{
     return timestamp;
@@ -59,7 +59,7 @@ std::string Component::getPersistentContent()
 }
 
 //settere
-void Component::setParent(Directory* newParent)
+void Component::setParent(const std::shared_ptr<Directory>& newParent)
 {
     parent = newParent;
 }

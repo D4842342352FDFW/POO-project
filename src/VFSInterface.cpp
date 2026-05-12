@@ -17,7 +17,7 @@
 
 namespace
 {
-std::string componentPath(Component* component)
+std::string componentPath(const std::shared_ptr<Component>& component)
 {
     if(component == nullptr)
     {
@@ -25,7 +25,7 @@ std::string componentPath(Component* component)
     }
 
     std::string path = component->getName();
-    Directory* parent = component->getParent();
+    auto parent = component->getParent();
     while(parent)
     {
         path = parent->getName() + "/" + path;
@@ -89,7 +89,7 @@ bool parseFileTypeToken(const std::string& token, int& outType)
     return false;
 }
 
-const char* fileTypeLabel(const int type)
+std::string fileTypeLabel(const int type)
 {
     switch(type)
     {
@@ -188,7 +188,7 @@ void VFSInterface::setStatus(const std::string& message)
     statusMessage = message;
 }
 
-Directory* VFSInterface::getCreateTargetDirectory() const
+std::shared_ptr<Directory> VFSInterface::getCreateTargetDirectory() const
 {
     if(selectedComponent == nullptr)
     {
@@ -197,13 +197,13 @@ Directory* VFSInterface::getCreateTargetDirectory() const
 
     if(selectedComponent->isDirectory())
     {
-        return static_cast<Directory*>(selectedComponent);
+        return std::dynamic_pointer_cast<Directory>(selectedComponent);
     }
 
     return selectedComponent->getParent();
 }
 
-Directory* VFSInterface::getDeleteParentDirectory() const
+std::shared_ptr<Directory> VFSInterface::getDeleteParentDirectory() const
 {
     if(selectedComponent == nullptr)
     {
@@ -388,7 +388,7 @@ void VFSInterface::executeTerminalCommand(const std::string& commandLine)
             std::getline(iss, content);
             content = trimLeft(content);
 
-            Directory* previousDirectory = manager->getCurrentDirectory();
+            auto previousDirectory = manager->getCurrentDirectory();
             try
             {
                 manager->setCurrentDirectory(getCreateTargetDirectory());
@@ -526,7 +526,7 @@ void VFSInterface::executeTerminalCommand(const std::string& commandLine)
                 return;
             }
 
-            Component* component = manager->getComponent(fileName);
+            auto component = manager->getComponent(fileName);
             if(component->isDirectory())
             {
                 appendTerminalOutput("Cannot edit a directory");
@@ -585,26 +585,26 @@ void VFSInterface::executeTerminalCommand(const std::string& commandLine)
                 return;
             }
 
-            Component* component = manager->getComponent(fileName);
+            auto component = manager->getComponent(fileName);
             if(component->isDirectory())
             {
                 appendTerminalOutput("Cannot decrypt a directory");
                 return;
             }
 
-            if(SecureArchive* secureArchive = dynamic_cast<SecureArchive*>(component))
+            if(auto secureArchive = std::dynamic_pointer_cast<SecureArchive>(component))
             {
                 appendTerminalOutput(secureArchive->readDecryptedAndDecompressedContentContent());
                 return;
             }
 
-            if(EncryptedFile* encryptedFile = dynamic_cast<EncryptedFile*>(component))
+            if(auto encryptedFile = std::dynamic_pointer_cast<EncryptedFile>(component))
             {
                 appendTerminalOutput(encryptedFile->readDecryptedContent());
                 return;
             }
 
-            if(CompressedFile* compressedFile = dynamic_cast<CompressedFile*>(component))
+            if(auto compressedFile = std::dynamic_pointer_cast<CompressedFile>(component))
             {
                 appendTerminalOutput(compressedFile->readDecompressedContent());
                 return;
@@ -700,7 +700,7 @@ void VFSInterface::renderTreePanel()
     ImGui::Text("Hierarchy");
     ImGui::Separator();
 
-    Directory* root = manager->getRoot();
+    auto root = manager->getRoot();
     if(root == nullptr)
     {
         ImGui::TextUnformatted("(empty)");
@@ -712,22 +712,11 @@ void VFSInterface::renderTreePanel()
     ImGui::Separator();
     ImGui::Text("Current Directory Explorer");
 
-    const char* sortItems[] = {"Name", "Size", "Timestamp"};
-    ImGui::Combo("Sort by", &listSortMode, sortItems, IM_ARRAYSIZE(sortItems));
+    ImGui::Combo("Sort by", &listSortMode, "Name\0Size\0Timestamp\0\0");
     ImGui::Checkbox("Ascending", &listSortAscending);
 
-    const char* filterItems[] = {
-        "All",
-        "Directories",
-        "Any File",
-        "Raw File",
-        "Image File",
-        "Video File",
-        "Encrypted File",
-        "Compressed File",
-        "Secure Archive"
-    };
-    ImGui::Combo("Type Filter", &listTypeFilter, filterItems, IM_ARRAYSIZE(filterItems));
+    ImGui::Combo("Type Filter", &listTypeFilter,
+        "All\0Directories\0Any File\0Raw File\0Image File\0Video File\0Encrypted File\0Compressed File\0Secure Archive\0\0");
 
     const auto listingLines = manager->getCurrentDirectoryListing(
         listSortModeToken(listSortMode),
@@ -749,7 +738,7 @@ void VFSInterface::renderTreePanel()
     ImGui::EndChild();
 }
 
-void VFSInterface::renderTreeNodeRecursive(Component* component)
+void VFSInterface::renderTreeNodeRecursive(const std::shared_ptr<Component>& component)
 {
     if(component == nullptr)
     {
@@ -764,18 +753,18 @@ void VFSInterface::renderTreeNodeRecursive(Component* component)
             flags |= ImGuiTreeNodeFlags_Selected;
         }
 
-        bool opened = ImGui::TreeNodeEx(component, flags, "%s", component->getName().c_str());
+        bool opened = ImGui::TreeNodeEx(component.get(), flags, "%s", component->getName().c_str());
         if(ImGui::IsItemClicked())
         {
             selectedComponent = component;
-            manager->setCurrentDirectory(static_cast<Directory*>(component));
+            manager->setCurrentDirectory(std::dynamic_pointer_cast<Directory>(component));
             showContentPreview = false;
         }
 
         if(opened)
         {
-            Directory* directory = static_cast<Directory*>(component);
-            for(auto child : directory->getChildren())
+            auto directory = std::dynamic_pointer_cast<Directory>(component);
+            for(const auto& child : directory->getChildren())
             {
                 renderTreeNodeRecursive(child);
             }
@@ -790,7 +779,7 @@ void VFSInterface::renderTreeNodeRecursive(Component* component)
             leafFlags |= ImGuiTreeNodeFlags_Selected;
         }
 
-        ImGui::TreeNodeEx(component, leafFlags, "* %s", component->getName().c_str());
+        ImGui::TreeNodeEx(component.get(), leafFlags, "* %s", component->getName().c_str());
         if(ImGui::IsItemClicked())
         {
             selectedComponent = component;
@@ -808,7 +797,7 @@ void VFSInterface::renderActionsPanel()
     ImGui::InputText("Folder Name", &newFolderName);
     if(ImGui::Button("Create Folder"))
     {
-        Directory* previousDirectory = manager->getCurrentDirectory();
+        auto previousDirectory = manager->getCurrentDirectory();
         try
         {
             if(newFolderName.empty())
@@ -834,14 +823,6 @@ void VFSInterface::renderActionsPanel()
     ImGui::Separator();
 
     ImGui::InputText("File Name", &newFileName);
-    const char* fileTypeItems[] = {
-        "Raw File",
-        "Image File",
-        "Video File",
-        "Encrypted File",
-        "Compressed File",
-        "Secure Archive"
-    };
     int selectedTypeIndex = newFileType - 1;
     if(selectedTypeIndex < 0)
     {
@@ -851,7 +832,8 @@ void VFSInterface::renderActionsPanel()
     {
         selectedTypeIndex = 5;
     }
-    ImGui::Combo("File Type", &selectedTypeIndex, fileTypeItems, IM_ARRAYSIZE(fileTypeItems));
+    ImGui::Combo("File Type", &selectedTypeIndex,
+        "Raw File\0Image File\0Video File\0Encrypted File\0Compressed File\0Secure Archive\0\0");
     newFileType = selectedTypeIndex + 1;
 
     if(newFileType == 2)
@@ -880,7 +862,7 @@ void VFSInterface::renderActionsPanel()
 
     if(ImGui::Button("Create File"))
     {
-        Directory* previousDirectory = manager->getCurrentDirectory();
+        auto previousDirectory = manager->getCurrentDirectory();
         try
         {
             if(newFileName.empty())
@@ -933,10 +915,10 @@ void VFSInterface::renderActionsPanel()
         }
         else
         {
-            Directory* previousDirectory = manager->getCurrentDirectory();
+            auto previousDirectory = manager->getCurrentDirectory();
             try
             {
-                Directory* deleteParent = getDeleteParentDirectory();
+                auto deleteParent = getDeleteParentDirectory();
                 if(deleteParent == nullptr)
                 {
                     setStatus("Cannot delete root directory");
@@ -1013,9 +995,9 @@ void VFSInterface::renderDetailsPanel()
     }
     ImGui::Text("Timestamp: %s", timeText.c_str());
 
-    bool encrypted = dynamic_cast<EncryptedFile*>(selectedComponent) != nullptr;
-    bool compressed = dynamic_cast<CompressedFile*>(selectedComponent) != nullptr;
-    if(dynamic_cast<SecureArchive*>(selectedComponent))
+    bool encrypted = std::dynamic_pointer_cast<EncryptedFile>(selectedComponent) != nullptr;
+    bool compressed = std::dynamic_pointer_cast<CompressedFile>(selectedComponent) != nullptr;
+    if(std::dynamic_pointer_cast<SecureArchive>(selectedComponent))
     {
         encrypted = true;
         compressed = true;
@@ -1032,13 +1014,13 @@ void VFSInterface::renderDetailsPanel()
 
     if(!selectedComponent->isDirectory())
     {
-        if(dynamic_cast<ImageFile*>(selectedComponent) == nullptr && dynamic_cast<VideoFile*>(selectedComponent) == nullptr)
+        if(std::dynamic_pointer_cast<ImageFile>(selectedComponent) == nullptr && std::dynamic_pointer_cast<VideoFile>(selectedComponent) == nullptr)
         {
-            Directory* parentDirectory = selectedComponent->getParent();
+            auto parentDirectory = selectedComponent->getParent();
 
             if(ImGui::Button("Convert to Normal"))
             {
-                Directory* previousDirectory = manager->getCurrentDirectory();
+                auto previousDirectory = manager->getCurrentDirectory();
                 try
                 {
                     manager->setCurrentDirectory(parentDirectory);
@@ -1058,7 +1040,7 @@ void VFSInterface::renderDetailsPanel()
             ImGui::SameLine();
             if(ImGui::Button("Convert to Encrypted"))
             {
-                Directory* previousDirectory = manager->getCurrentDirectory();
+                auto previousDirectory = manager->getCurrentDirectory();
                 try
                 {
                     manager->setCurrentDirectory(parentDirectory);
@@ -1077,7 +1059,7 @@ void VFSInterface::renderDetailsPanel()
 
             if(ImGui::Button("Convert to Archived"))
             {
-                Directory* previousDirectory = manager->getCurrentDirectory();
+                auto previousDirectory = manager->getCurrentDirectory();
                 try
                 {
                     manager->setCurrentDirectory(parentDirectory);
@@ -1097,7 +1079,7 @@ void VFSInterface::renderDetailsPanel()
             ImGui::SameLine();
             if(ImGui::Button("Convert to Secure Archive"))
             {
-                Directory* previousDirectory = manager->getCurrentDirectory();
+                auto previousDirectory = manager->getCurrentDirectory();
                 try
                 {
                     manager->setCurrentDirectory(parentDirectory);

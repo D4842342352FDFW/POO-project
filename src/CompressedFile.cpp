@@ -261,7 +261,7 @@ std::string CompressedFile ::readDecompressedContent(){
 
 std::string CompressedFile::getReadableContent() const
 {
-    return const_cast<CompressedFile*>(this)->readDecompressedContent();
+    return const_cast<CompressedFile&>(*this).readDecompressedContent();
 }
 
 std::string CompressedFile::getDisplayContent() const

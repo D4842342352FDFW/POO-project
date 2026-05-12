@@ -24,7 +24,7 @@ class VideoFile : public Component{
     VideoFile& operator=(const VideoFile& other);
 
     //functia de clone
-    Component* clone() const override;
+    std::shared_ptr<Component> clone() const override;
 
     //functia afisare date
     void display(int depth) const override;

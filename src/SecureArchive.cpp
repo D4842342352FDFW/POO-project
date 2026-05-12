@@ -70,7 +70,7 @@ std::string SecureArchive::readDecryptedAndDecompressedContentContent()
 
 std::string SecureArchive::getReadableContent() const
 {
-    return const_cast<SecureArchive*>(this)->readDecryptedAndDecompressedContentContent();
+    return const_cast<SecureArchive&>(*this).readDecryptedAndDecompressedContentContent();
 }
 
 std::string SecureArchive::getDisplayContent() const

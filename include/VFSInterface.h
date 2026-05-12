@@ -4,14 +4,15 @@
 #include "../include/Component.h"
 #include <string>
 #include <vector>
+#include <memory>
 
 class VFSInterface
 {
     //manager-ul aplicatiei
-    Manager* manager;
+    std::shared_ptr<Manager> manager;
 
     //starea UI
-    Component* selectedComponent;
+    std::shared_ptr<Component> selectedComponent;
     bool showContentPreview;
 
     //starea pentru create folder
@@ -52,12 +53,12 @@ class VFSInterface
     //helpers de randare
     void renderToolbar();
     void renderTreePanel();
-    void renderTreeNodeRecursive(Component* component);
+    void renderTreeNodeRecursive(const std::shared_ptr<Component>& component);
     void renderDetailsPanel();
     void renderActionsPanel();
     void renderTerminalPanel();
-    Directory* getCreateTargetDirectory() const;
-    Directory* getDeleteParentDirectory() const;
+    std::shared_ptr<Directory> getCreateTargetDirectory() const;
+    std::shared_ptr<Directory> getDeleteParentDirectory() const;
     void executeTerminalCommand(const std::string& commandLine);
     void appendTerminalOutput(const std::string& line);
 

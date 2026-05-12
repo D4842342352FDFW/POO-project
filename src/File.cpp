@@ -10,9 +10,9 @@ File::File(const std::string& name, const std::string& content) : Component(name
 File::File(const File& other) : Component(other.getName()), data(other.data), fileSize(other.fileSize) {}
 
 //functia de clone
-Component* File::clone() const
+std::shared_ptr<Component> File::clone() const
 {
-    return new File(*this);
+    return std::make_shared<File>(*this);
 }
 
 //functia de afisare date fisier text

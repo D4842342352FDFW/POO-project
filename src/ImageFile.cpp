@@ -31,9 +31,9 @@ ImageFile& ImageFile::operator=(const ImageFile& other)
 }
 
 //functia de clone
-Component* ImageFile::clone() const
+std::shared_ptr<Component> ImageFile::clone() const
 {
-    return new ImageFile(*this);
+    return std::make_shared<ImageFile>(*this);
 }
 
 //functia de afisare date imagine

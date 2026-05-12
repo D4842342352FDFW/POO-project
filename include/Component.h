@@ -3,6 +3,7 @@
 #include <ctime>
 #include <cstddef>
 #include <vector>
+#include <memory>
 
 class Directory;
 
@@ -14,7 +15,7 @@ class Component{
     size_t size;
     time_t timestamp;
     std::string storagePath;
-    Directory* parent;
+    std::weak_ptr<Directory> parent;
 
     public:
     //constructor + destructor componenta 
@@ -26,7 +27,7 @@ class Component{
     virtual ~Component();
 
     //functie de copiere componenta
-    virtual Component* clone() const = 0;
+    virtual std::shared_ptr<Component> clone() const = 0;
 
     //afisare date componenta 
     virtual void display(int depth) const = 0;
@@ -48,7 +49,7 @@ class Component{
     static int getInstanceCount();
     virtual size_t getSize() const = 0;
     std::string getName() const;
-    Directory* getParent() const;
+    std::shared_ptr<Directory> getParent() const;
     time_t getTimestamp() const;
     std::string getStoragePath() const;
     
@@ -56,7 +57,7 @@ class Component{
     virtual bool isDirectory() const = 0;
     
     //setter parent 
-    void setParent(Directory* newParent);
+    void setParent(const std::shared_ptr<Directory>& newParent);
     void setTimestamp(time_t newTimestamp);
     void setStoragePath(const std::string& path);
 };

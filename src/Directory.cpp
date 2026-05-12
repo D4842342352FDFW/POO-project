@@ -4,10 +4,6 @@
 //functia de clear
 void Directory::clear()
 {
-    for(auto child : children)
-    {
-        delete child;   
-    }
     children.clear();
 }
 
@@ -30,7 +26,8 @@ Directory::~Directory()
 }
 
 //constructor copiere
-Directory::Directory(const Directory& other) : Component(other.getName())
+Directory::Directory(const Directory& other)
+    : Component(other.getName()), std::enable_shared_from_this<Directory>()
 {
     this->copyFrom(other);
 }
@@ -48,8 +45,8 @@ Directory& Directory::operator=(const Directory& other)
 }
 
 //functia de clone 
-Component* Directory::clone() const{
-    return new Directory(*this);
+std::shared_ptr<Component> Directory::clone() const{
+    return std::make_shared<Directory>(*this);
 }
 
 //afisare recursiva date director
@@ -61,7 +58,7 @@ void Directory::display(int depth) const
     time.pop_back();
     std::cout << time << " -> Directory " << name << " has " << getSize() << " bytes total\n";
 
-    for(auto child : children)
+    for(const auto& child : children)
     {
         child->display(depth+1);
     }
@@ -80,7 +77,7 @@ std::vector<std::string> Directory::getMetadataLines() const
 //getter calcul dimensiune totala director
 size_t Directory::getSize() const{
     size_t total = 0;
-    for(auto child : children)
+    for(const auto& child : children)
     {
         total = total + child->getSize();
     }
@@ -88,7 +85,7 @@ size_t Directory::getSize() const{
 }
 
 //getter copii
-const std::vector<Component*>& Directory::getChildren() const{
+const std::vector<std::shared_ptr<Component>>& Directory::getChildren() const{
     return children;
 }
 
@@ -99,11 +96,11 @@ void Directory::setName(const std::string& name)
 }
 
 //adagare componenta 
-void Directory::addComponent(Component* component)
+void Directory::addComponent(const std::shared_ptr<Component>& component)
 {
     if(component)
     {
-        component->setParent(this);
+        component->setParent(shared_from_this());
         children.push_back(component);
     }
 }
@@ -115,7 +112,6 @@ void Directory::removeComponent(const std::string& name)
     {
         if((*it)->getName() == name)
         {
-            delete *it;
             children.erase(it);
             return;
         }
@@ -123,8 +119,8 @@ void Directory::removeComponent(const std::string& name)
 }
 
 //cautare componenta
-Component* Directory::findComponent(const std::string& name) const{
-    for(auto child : children)
+std::shared_ptr<Component> Directory::findComponent(const std::string& name) const{
+    for(const auto& child : children)
     {
         if(child->getName() == name)
             return child;

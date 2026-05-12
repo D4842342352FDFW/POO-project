@@ -83,7 +83,7 @@ std::string EncryptedFile:: readDecryptedContent(){
 
 std::string EncryptedFile::getReadableContent() const
 {
-    return const_cast<EncryptedFile*>(this)->readDecryptedContent();
+    return const_cast<EncryptedFile&>(*this).readDecryptedContent();
 }
 
 std::string EncryptedFile::getDisplayContent() const

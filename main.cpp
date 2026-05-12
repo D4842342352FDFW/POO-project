@@ -1,4 +1,6 @@
 #include <iostream>
+#include <memory>
+#include <string>
 #include <GLFW/glfw3.h>
 
 #include "external/imgui/imgui-master/imgui.h"
@@ -17,12 +19,14 @@ int main()
         return 1;
     }
 
-    const char* glslVersion = "#version 130";
+    const std::string glslVersion = "#version 130";
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "VFS Simulator", nullptr, nullptr);
+    auto window = std::unique_ptr<GLFWwindow, void(*)(GLFWwindow*)>(
+        glfwCreateWindow(1280, 720, "VFS Simulator", nullptr, nullptr),
+        glfwDestroyWindow);
     if(window == nullptr)
     {
         std::cerr << "Failed to create GLFW window\n";
@@ -31,9 +35,9 @@ int main()
     }
 
     //fereastra ramane la dimensiune fixa
-    glfwSetWindowSizeLimits(window, 1280, 720, 1280, 720);
+    glfwSetWindowSizeLimits(window.get(), 1280, 720, 1280, 720);
 
-    glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window.get());
     glfwSwapInterval(1);
 
     IMGUI_CHECKVERSION();
@@ -43,7 +47,7 @@ int main()
     ImGui::StyleColorsLight();
 
     ImGuiStyle& style = ImGui::GetStyle();
-    ImVec4* colors = style.Colors;
+    auto& colors = style.Colors;
 
     //tema deschisa cu accente portocalii
     colors[ImGuiCol_WindowBg] = ImVec4(0.98f, 0.98f, 0.98f, 1.00f);
@@ -68,12 +72,12 @@ int main()
     colors[ImGuiCol_SeparatorHovered] = ImVec4(1.00f, 0.58f, 0.16f, 0.90f);
     colors[ImGuiCol_SeparatorActive] = ImVec4(0.94f, 0.46f, 0.08f, 1.00f);
 
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init(glslVersion);
+    ImGui_ImplGlfw_InitForOpenGL(window.get(), true);
+    ImGui_ImplOpenGL3_Init(glslVersion.c_str());
 
     VFSInterface vfsUi;
 
-    while(!glfwWindowShouldClose(window))
+    while(!glfwWindowShouldClose(window.get()))
     {
         glfwPollEvents();
 
@@ -86,20 +90,20 @@ int main()
         ImGui::Render();
         int displayW = 0;
         int displayH = 0;
-        glfwGetFramebufferSize(window, &displayW, &displayH);
+        glfwGetFramebufferSize(window.get(), &displayW, &displayH);
         glViewport(0, 0, displayW, displayH);
         glClearColor(0.96f, 0.96f, 0.96f, 1.00f);
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(window.get());
     }
 
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    glfwDestroyWindow(window);
+    window.reset();
     glfwTerminate();
 
     Manager::destroyInstance();

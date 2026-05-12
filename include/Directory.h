@@ -2,11 +2,12 @@
 #include "../include/Component.h"
 #include <vector>
 #include <string>
+#include <memory>
 
-class Directory : public Component{
+class Directory : public Component, public std::enable_shared_from_this<Directory>{
 
     //date director
-    std::vector<Component*> children;
+    std::vector<std::shared_ptr<Component>> children;
 
     //functii recursive de clear si copy
     void clear();
@@ -23,7 +24,7 @@ class Directory : public Component{
     Directory& operator=(const Directory& other);
 
     //functie clone director
-    Component* clone() const override;
+    std::shared_ptr<Component> clone() const override;
 
     //afisare date director
     void display(int depth) const override;
@@ -37,14 +38,14 @@ class Directory : public Component{
     bool isDirectory() const override { return true; }
     
     //getter copii
-    const std::vector<Component*>& getChildren() const;
+    const std::vector<std::shared_ptr<Component>>& getChildren() const;
 
     //setter nume
     void setName(const std::string& name);
 
     //functii de adaugare stergere si cautare de componenta in 
     //in structura arborescenta
-    void addComponent(Component* component);
+    void addComponent(const std::shared_ptr<Component>& component);
     void removeComponent(const std::string& name);
-    Component* findComponent(const std::string& name) const;
+    std::shared_ptr<Component> findComponent(const std::string& name) const;
 };

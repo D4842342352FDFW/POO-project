@@ -10,7 +10,6 @@ class Exception : public std::exception {
     public:
     Exception() : message("VFS Error") {}
     Exception(const std::string& msg) : message(msg) {}
-    Exception(const char* msg) : message(msg) {}
     
     const char* what() const noexcept override {
         return message.c_str();
