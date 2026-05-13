@@ -8,7 +8,9 @@
 
 class Component;
 class Directory;
-class FileFactory;
+class ConcreteFileFactory;
+class ConcreteDirectoryFactory;
+class Factory;
 
 class Manager{
 
@@ -19,7 +21,8 @@ class Manager{
     //index global => cautare rapida
     std::unordered_multimap<std::string, std::shared_ptr<Component>> globalIndex;
     std::filesystem::path storageRoot;
-    std::shared_ptr<FileFactory> fileFactory;
+    std::shared_ptr<ConcreteFileFactory> fileFactory;
+    std::shared_ptr<ConcreteDirectoryFactory> directoryFactory;
 
     //functii de ajutor
     void removeFromIndex(const std::shared_ptr<Component>& component);

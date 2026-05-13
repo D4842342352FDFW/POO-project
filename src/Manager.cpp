@@ -6,7 +6,7 @@
 #include "../include/EncryptedFile.h"
 #include "../include/CompressedFile.h"
 #include "../include/SecureArchive.h"
-#include "../include/FileFactory.h"
+#include "../include/Factory.h"
 #include "../include/Exception.h"
 #include <iostream>
 #include <fstream>
@@ -135,10 +135,11 @@ Manager::Manager()
     storageRoot = "root";
     ensureStorageRoot();
 
-    root = std::make_shared<Directory>("root");
+    fileFactory = std::make_shared<ConcreteFileFactory>();
+    directoryFactory = std::make_shared<ConcreteDirectoryFactory>();
+    root = std::dynamic_pointer_cast<Directory>(directoryFactory->createDirectory("root"));
     currentDirectory = root;
     globalIndex.emplace("root", root);
-    fileFactory = std::make_shared<ConcreteFileFactory>();
 
     //la pornire incercam sa incarcam direct din arborele real de pe disc
     loadFromDiskTree();
@@ -257,7 +258,7 @@ void Manager::loadFromDiskTree()
         return;
     }
 
-    root = std::make_shared<Directory>("root");
+    root = std::dynamic_pointer_cast<Directory>(directoryFactory->createDirectory("root"));
 
     std::function<void(const std::shared_ptr<Directory>&, const std::filesystem::path&)> loadRecursive;
     loadRecursive = [&](const std::shared_ptr<Directory>& parent, const std::filesystem::path& currentPath)
@@ -267,7 +268,7 @@ void Manager::loadFromDiskTree()
             const std::string nodeName = entry.path().filename().string();
             if(entry.is_directory())
             {
-                auto childDirectory = std::make_shared<Directory>(nodeName);
+                auto childDirectory = std::dynamic_pointer_cast<Directory>(directoryFactory->createDirectory(nodeName));
                 parent->addComponent(childDirectory);
                 loadRecursive(childDirectory, entry.path());
             }
@@ -432,7 +433,7 @@ void Manager::createDirectory(const std::string& name)
         throw Exception("Element already exists in current directory");
     }
 
-    auto newDir = fileFactory->createDirectory(name);
+    auto newDir = directoryFactory->createDirectory(name);
     currentDirectory->addComponent(newDir);
     globalIndex.emplace(name, newDir);
 

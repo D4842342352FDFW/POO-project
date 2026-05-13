@@ -18,7 +18,7 @@ endif()
 # Main executable
 add_executable(${PROJECT_NAME} main.cpp src/Component.cpp src/Directory.cpp src/File.cpp src/ImageFile.cpp
 src/VideoFile.cpp  src/EncryptedFile.cpp src/CompressedFile.cpp src/SecureArchive.cpp
-src/Manager.cpp src/FileFactory.cpp src/VFSInterface.cpp
+src/Manager.cpp src/Factory.cpp src/VFSInterface.cpp
 external/imgui/imgui-master/imgui.cpp
 external/imgui/imgui-master/imgui_draw.cpp
 external/imgui/imgui-master/imgui_tables.cpp
