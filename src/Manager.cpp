@@ -276,7 +276,36 @@ void Manager::loadFromDiskTree()
                 if(entry.is_regular_file())
                 {
                     std::string content = readDiskFile(entry.path().string());
-                    auto childFile = std::make_shared<File>(nodeName, content);
+                    std::string extension = entry.path().extension().string();
+                    
+                    
+                    std::transform(extension.begin(), extension.end(), extension.begin(),
+                        [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+                    
+                    std::shared_ptr<Component> childFile;
+                    
+                    
+                    if(extension == ".bmp")
+                    {
+                        childFile = std::make_shared<ImageFile>(nodeName, 1920, 1080, 24, "bmp");
+                    }
+                    else if(extension == ".gif")
+                    {
+                        childFile = std::make_shared<VideoFile>(nodeName, 1920, 1080, 24, 60, 10.0, "gif");
+                    }
+                    else if(extension == ".enc")
+                    {
+                        childFile = std::make_shared<EncryptedFile>(nodeName, content);
+                    }
+                    else if(extension == ".zip")
+                    {
+                        childFile = std::make_shared<CompressedFile>(nodeName, content);
+                    }
+                    else
+                    {
+                        childFile = std::make_shared<File>(nodeName, content);
+                    }
+                    
                     childFile->setStoragePath(entry.path().string());
                     parent->addComponent(childFile);
                 }
@@ -593,6 +622,7 @@ void Manager::displayTree() const{
     std::cout << "------------------------------------------\n";
 }
 
+//afisare continut arbore
 std::vector<std::string> Manager::getTreeLines() const
 {
     std::vector<std::string> lines;
@@ -628,6 +658,7 @@ std::vector<std::string> Manager::getTreeLines() const
     return lines;
 }
 
+//afisare continut director curent cu sortare si filtrare
 std::vector<std::string> Manager::getCurrentDirectoryListing(const std::string& sortBy, bool ascending, const std::string& typeFilter) const
 {
     std::vector<std::shared_ptr<Component>> items;
@@ -703,6 +734,7 @@ std::vector<std::string> Manager::getCurrentDirectoryListing(const std::string& 
     return lines;
 }
 
+//afisare detalii pentru o componenta cautata dupa nume
 std::string Manager::getComponentDetails(const std::string& name) const
 {
     auto component = findByName(name);
@@ -731,6 +763,7 @@ std::string Manager::getComponentDetails(const std::string& name) const
     return details;
 }
 
+//afisare statistici pentru directorul curent
 std::string Manager::getCurrentDirectoryStats() const
 {
     size_t files = 0;
@@ -919,6 +952,7 @@ std::string Manager::readFile(const std::string& name) const{
     return component->getDisplayContent();
 }
 
+//functie de actualizare continut fisier
 void Manager::updateFileContent(const std::string& name, const std::string& content)
 {
     auto component = findByName(name);

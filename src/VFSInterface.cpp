@@ -168,7 +168,7 @@ VFSInterface::VFSInterface()
     videoBpp = 24;
     videoFps = 60;
     videoDuration = 10.0;
-    mediaFormat = "txt";
+    mediaFormat = "";
 
     searchName = "";
     listSortMode = 0;
@@ -961,12 +961,30 @@ void VFSInterface::renderActionsPanel()
         {
             try
             {
-                const std::string absPath = manager->getAbsoluteDiskPath(searchName);
-                setStatus("Absolute path: " + absPath);
+                auto foundComponent = manager->getComponent(searchName);
+                if(foundComponent == nullptr)
+                {
+                    setStatus("Element not found: " + searchName);
+                }
+                else
+                {
+                    selectedComponent = foundComponent;
+                    showContentPreview = true;
+                    
+                    auto parentDir = foundComponent->getParent();
+                    if(parentDir != nullptr)
+                    {
+                        manager->setCurrentDirectory(parentDir);
+                    }
+                    
+                    const std::string absPath = manager->getAbsoluteDiskPath(searchName);
+                    const std::string componentType = foundComponent->isDirectory() ? "Folder" : "File";
+                    setStatus("Found " + componentType + ": " + foundComponent->getName() + " | Path: " + absPath);
+                }
             }
             catch(const Exception& e)
             {
-                setStatus(e.what());
+                setStatus("Search error: " + std::string(e.what()));
             }
         }
     }
